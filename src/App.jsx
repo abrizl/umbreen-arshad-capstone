@@ -6,6 +6,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from './components/Header/Header';
 import LandingPage from './pages/LandingPage/LandingPage';
 import Footer from './components/Footer/Footer';
+import AboutPage from './pages/AboutPage/AboutPage';
+import ContactPage from './pages/ContactPage/ContactPage';
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
         <Header/>
         <Routes>
           <Route path="/" element={<LandingPage/>}/>
+          <Route path="/about" element={<AboutPage/>}/>
+          <Route path="/contact" element={<ContactPage/>}/>
         </Routes>
         <Footer/>
     </BrowserRouter>

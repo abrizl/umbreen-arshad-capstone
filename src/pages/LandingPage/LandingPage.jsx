@@ -8,8 +8,8 @@ function LandingPage() {
             <div className="landing__hero">
                 <img src={banner} alt="milk pour on dark background" className="landing__image"/> 
                 <p className="landing__heading">farm fresh milk delivered daily</p>
-            
             </div>
+            
         </section>
     )
 }

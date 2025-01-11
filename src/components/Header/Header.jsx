@@ -1,14 +1,15 @@
 import './Header.scss';
 import milkotovLogo from '../../assets/Milkotov-wordmark.svg';
+import {Link} from 'react-router-dom';
 
 function Header() {
     return (
         <section className="header">
             <img src={milkotovLogo} alt="Milkotov logo" className="header__logo"/>
             <div className="header__navigation">
-                <p className="header__link">Home</p>
-                <p className="header__link">About</p>
-                <p className="header__link">Contact</p>
+                <Link to= "/" className="header__link">Home</Link>
+                <Link to= "/about" className="header__link">About</Link>
+                <Link to= "/contact" className="header__link">Contact</Link>
                 <button className="header__button">Schedule a Delivery</button>
             </div>
         </section>
