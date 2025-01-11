@@ -1,6 +1,5 @@
 import './LandingPage.scss';
-import banner from '../../assets/images/Milk-Banner-Continuous-01.png';
-import banner2 from '../../assets/images/Milk-Banner-Continuous-02.png';
+import banner from '../../assets/images/Continuous Banner-01.png';
 
 
 function LandingPage() {
@@ -8,10 +7,8 @@ function LandingPage() {
         <section className="landing">
             <div className="landing__hero">
                 <img src={banner} alt="milk pour on dark background" className="landing__image"/> 
-            </div>
-            <div className="landing__second">
-                <img src={banner2} alt="milk pour on dark background" className="landing__image"/>    
-
+                <p className="landing__heading">farm fresh milk delivered daily</p>
+            
             </div>
         </section>
     )

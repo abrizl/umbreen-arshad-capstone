@@ -3,10 +3,24 @@
 @use '../../partials/variables' as *;
 
 .landing {
+   
+    &__hero {
+        padding: 0;
+    }
 
     &__image {
         object-fit: cover;
-        height: 30vh;
+        height: 100%;
         width: 100%;
+
+        position: relative;
+    }
+
+    &__heading {
+        z-index: 2;
+        color: $Color-White;
+        position: absolute;
+        top: 15%;
+        right: 30%;
     }
 }
