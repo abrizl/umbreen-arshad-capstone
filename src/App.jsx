@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from './components/Header/Header';
+import LandingPage from './pages/LandingPage/LandingPage';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         {/* <ScrollToTop/> */}
         <Header/>
         <Routes>
-          {/* <Route path="/" element={<HomePage}/> */}
+          <Route path="/" element={<LandingPage/>}/>
         </Routes>
         {/* <Footer/> */}
     </BrowserRouter>

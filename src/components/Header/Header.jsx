@@ -7,8 +7,8 @@ function Header() {
             <img src={milkotovLogo} alt="Milkotov logo" className="header__logo"/>
             <div className="header__navigation">
                 <p className="header__link">Home</p>
-                <p className="header__link">About Us</p>
-                <p className="header__link">Contact Us</p>
+                <p className="header__link">About</p>
+                <p className="header__link">Contact</p>
                 <button className="header__button">Schedule a Delivery</button>
             </div>
         </section>

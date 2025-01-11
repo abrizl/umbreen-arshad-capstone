@@ -3,10 +3,33 @@
 @use '../../partials/variables' as *;
 
 .header {
+    @include labelMobile();
     padding: 1rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    &__navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1rem 0.5rem 0.5rem 1rem;
+    }
+
+    &__link {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
 
     &__logo {
         max-width: 10rem;
         max-height: 10rem;
+        align-self: center;
+    }
+
+    &__button {
+        display: none;
     }
 }
