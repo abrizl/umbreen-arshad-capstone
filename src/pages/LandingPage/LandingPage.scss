@@ -4,8 +4,10 @@
 
 .landing {
    
-    &__hero {
-        padding: 0;
+    &__container {
+        display: grid;
+        place-items: center;
+        position: relative;
     }
 
     &__image {
@@ -16,11 +18,45 @@
         position: relative;
     }
 
-    &__heading {
-        z-index: 2;
-        color: $Color-White;
+    &__overlay {
         position: absolute;
-        top: 15%;
-        right: 30%;
+        z-index: 1;
     }
+
+    &__heading {
+        color: $Color-Mustard;
+        
+    }
+
+    &__two {
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__item {
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    &__topText {
+        flex: 1;
+        width: 100%;
+        font-size: 6rem;
+        line-height: 1;
+    }
+
+    &__under {
+        flex: 1;
+        font-size: 1.7rem;
+        width: 100%;
+        text-align: left;
+        line-height: 1;
+    }
+
+
 }
