@@ -3,10 +3,6 @@
 @use '../../partials/variables' as *;
 
 .landing {
-
-    overflow-x: hidden;
-
-
     display:flex;
     flex-direction: column;
     gap: 2rem;
