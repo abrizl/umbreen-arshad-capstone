@@ -1,22 +1,25 @@
-// Nexa -- //
+// Poppins -- //
 
-@font-face {
-    font-family: Nexa;
-    src: url("../assets/fonts/Nexa\ Light.otf");
-    font-weight: Light;
+.poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 300;
     font-style: normal;
-}
-
-@font-face {
-    font-family: Nexa;
-    src: url("../assets/fonts/Nexa\ Regular.otf");
-    font-weight: Regular;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
     font-style: normal;
-}
-
-@font-face {
-    font-family: Nexa;
-    src: url("../assets/fonts/Nexa\ Bold.otf");
-    font-weight: Bold;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
     font-style: normal;
-}
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
