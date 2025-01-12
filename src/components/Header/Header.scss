@@ -4,7 +4,7 @@
 
 .header {
     @include labelMobile();
-    padding: 1rem 1rem;
+    padding: 1rem 1rem 0 1rem;
 
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 1rem 0.5rem 0.5rem 1rem;
+        padding: 1rem 1rem 0.5rem 1rem;
     }
 
     &__link {

@@ -13,7 +13,7 @@ import ContactPage from './pages/ContactPage/ContactPage';
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter className="container">
         {/* <ScrollToTop/> */}
         <Header/>
         <Routes>
