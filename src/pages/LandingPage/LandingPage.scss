@@ -4,6 +4,9 @@
 
 .landing {
 
+    overflow-x: hidden;
+
+
     display:flex;
     flex-direction: column;
     gap: 2rem;
@@ -32,15 +35,20 @@
         
     }
 
+    &__whySection {
+        padding: 0 1rem 1rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     &__two {
-        padding: 0 1rem;
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
     &__item {
-        padding-left: 1rem;
+        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: flex-start;

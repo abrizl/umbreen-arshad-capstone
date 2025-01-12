@@ -12,45 +12,47 @@ function LandingPage() {
                 </div>
             </div>
 
-            <div className="landing__two">
-                <div className="landing__item">
-                    <p className="landing__description">from the udders into the bottle</p>
+            <div className="landing__whySection">
+                <div className="landing__two">
+                    <div className="landing__item">
+                        <p className="landing__description">from the udders into the bottle</p>
+                    </div>
+                    <div className="landing__item">
+                        <p className="landing__topText">100%</p>
+                        <p className="landing__under">fresh, whole milk</p>
+                    </div>
                 </div>
-                <div className="landing__item">
-                    <p className="landing__topText">100%</p>
-                    <p className="landing__under">fresh, whole milk</p>
-                </div>
-                
-            </div>
 
-            <div className="landing__two">
-                <div className="landing__item">
-                    <p className="landing__under">delivered</p>
-                    <p className="landing__topText">daily</p>
+                <div className="landing__two">
+                    <div className="landing__item">
+                        <p className="landing__under">delivered</p>
+                        <p className="landing__topText">daily</p>
+                    </div>
+                    <div className="landing__item">
+                        <p className="landing__description">fresh from the farm, to your door</p>
+                    </div>
                 </div>
-                <div className="landing__item">
-                    <p className="landing__description">fresh from the farm, to your door</p>
-                </div>
-            </div>
 
-            <div className="landing__two">
-                <div className="landing__item">
-                    <p className="landing__description">we work with local farms to ensure quality and fair trade </p>
+                <div className="landing__two">
+                    <div className="landing__item">
+                        <p className="landing__description">we work with local farms to ensure quality and fair trade </p>
+                    </div>
+                    <div className="landing__item">
+                        <p className="landing__under">support</p>
+                        <p className="landing__topText">local</p>
+                    </div>
                 </div>
-                <div className="landing__item">
-                    <p className="landing__under">support</p>
-                    <p className="landing__topText">local</p>
-                </div>
-            </div>
 
-            <div className="landing__two">
-                <div className="landing__item">
-                    <p className="landing__under">ditch the</p>
-                    <p className="landing__topText">plastic</p>
+                <div className="landing__two">
+                    <div className="landing__item">
+                        <p className="landing__under">ditch the</p>
+                        <p className="landing__topText">plastic</p>
+                    </div>
+                    <div className="landing__item">
+                        <p className="landing__description">join our efforts to reduce single-use plastics </p>
+                    </div>
                 </div>
-                <div className="landing__item">
-                    <p className="landing__description">join our efforts to reduce single-use plastics </p>
-                </div>
+
             </div>
             
         </section>
