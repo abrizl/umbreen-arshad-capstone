@@ -64,7 +64,7 @@ function ContactUs() {
             </div>
             <div className="contact__subtitle">
                 <p className="contact__item">or call us at:</p>
-                <p className="contact__item">+17783218475, +17783218467</p>
+                <p className="contact__item">0303 726 9675</p>
             </div>
         </section>
     )
