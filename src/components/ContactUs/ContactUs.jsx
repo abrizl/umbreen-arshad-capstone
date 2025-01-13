@@ -1,5 +1,8 @@
 import './ContactUs.scss';
 import { useState } from 'react';
+import facebookIcon from '../../assets/icons/Facebook.svg';
+import instagramIcon from '../../assets/icons/Instagram.svg';
+
 
 function ContactUs() {
     
@@ -62,12 +65,32 @@ function ContactUs() {
                     <button className="contact__button">Send</button>
                 </form>
             </div>
-            <div className="contact__subtitle">
-                <p className="contact__item">for order support:</p>
-                <p className="contact__item">0303 726 9675</p>
-            </div>
 
             <div className="contact__information">
+                <div className="contact__subtitle">
+                    <p className="contact__item">for immediate order support:</p>
+                    <p className="contact__item">0303 726 9675</p>
+                </div>
+
+                <div className="contact__subtitle">
+                    <p className="contact__heading">Address</p>
+                    <p className="contact__item">0303 726 9675</p>
+                </div>
+
+                <div className="contact__subtitle">
+                    <p className="contact__heading">Business Hours</p>
+                    <p className="contact__item">Mon - Fri ... 9am - 9pm </p>
+                    <p className="contact__item">Sat - Sun ... 10am - 5pm </p>
+                </div>
+
+                <div className="contact__subtitle">
+                    <div className="contact__circle">
+                        <img src={facebookIcon} alt="facebook icon" className='contact__icon'/>
+                    </div>
+                    <div className="contact__circle">
+                        <img src={instagramIcon} alt="facebook icon" className='contact__icon'/>
+                    </div>
+                </div>
 
             </div>
         </section>
