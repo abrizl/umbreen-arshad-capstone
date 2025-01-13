@@ -72,6 +72,7 @@
 
 
     &__form {
+        @include bodyCopyMobile();
         border:none;
         border-radius: 3.125rem;
         background-color: $Color-LightMustard ;
@@ -94,6 +95,7 @@
     }
 
     &__message {
+        @include bodyCopyMobile();
         border: none;
         border-radius: 1rem;
         background-color: $Color-LightMustard ;
