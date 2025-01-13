@@ -1,8 +1,9 @@
+import ContactUs from "../../components/ContactUs/ContactUs";
 
 function ContactPage() {
     return (
         <section className="contact">
-            hello
+            <ContactUs/>
         </section>
     )
 }
