@@ -33,9 +33,17 @@ function Footer() {
 
             <div className="footer__information">
                 <p className="footer__heading">For delivery and information:</p>
-                <p className="footer__detail">0303 726 9675</p>
-                <p className="footer__detail">@milkotov</p>
-                <p className="footer__detail">info@milkotov.com</p>
+                <div className="footer__container">
+                    <div className="footer_content">
+                        <p className="footer__detail">0303 726 9675</p>
+                    </div>
+                    <div className="footer_content">
+                        <p className="footer__detail">@milkotov</p>
+                    </div>
+                    <div className="footer_content">
+                        <p className="footer__detail">info@milkotov.com</p>
+                    </div>
+                </div>
                 <p className="footer__heading">Currently delivering in Rawalpindi</p>
 
 

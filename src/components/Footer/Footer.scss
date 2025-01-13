@@ -12,6 +12,10 @@
     align-items: center;
     gap: 2rem;
 
+    &__logo {
+        max-width: 20rem;
+    }
+
     &__bottle {
         max-height: 80px;
         max-width: 80px;
