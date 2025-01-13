@@ -133,11 +133,27 @@
             }
     }
 
+    &__information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+    }
+
+    &__bundle {
+        display: flex;
+        align-items: row;
+        align-items: center;
+    }
+
     &__subtitle {
-        margin: 1rem 2rem;
-        border: 1px solid $Color-Mustard;
         padding: 1rem 2rem;
         border-radius: 3.125rem;
         align-self: center;
     }
+
+    &__heading {
+        font-weight: bold;
+    }
+
 }

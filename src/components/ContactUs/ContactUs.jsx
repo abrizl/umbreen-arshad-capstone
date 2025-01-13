@@ -72,15 +72,20 @@ function ContactUs() {
                     <p className="contact__item">0303 726 9675</p>
                 </div>
 
-                <div className="contact__subtitle">
-                    <p className="contact__heading">Address</p>
-                    <p className="contact__item">0303 726 9675</p>
-                </div>
+                <div className="contact__bundle">
 
-                <div className="contact__subtitle">
-                    <p className="contact__heading">Business Hours</p>
-                    <p className="contact__item">Mon - Fri ... 9am - 9pm </p>
-                    <p className="contact__item">Sat - Sun ... 10am - 5pm </p>
+                    <div className="contact__subtitle">
+                        <p className="contact__heading">Address</p>
+                        <p className="contact__item">Unit 76F, Adyala Rd </p>
+                        <p className="contact__item">Ghauri Town, Rawalpindi</p>
+                    </div>
+
+                    <div className="contact__subtitle">
+                        <p className="contact__heading">Business Hours</p>
+                        <p className="contact__item">Mon - Fri ... 9am - 9pm </p>
+                        <p className="contact__item">Sat - Sun ... 10am - 5pm </p>
+                    </div>
+
                 </div>
 
                 <div className="contact__subtitle">
