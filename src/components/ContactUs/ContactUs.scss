@@ -130,4 +130,12 @@
                 cursor: pointer;
             }
     }
+
+    &__subtitle {
+        margin: 1rem 2rem;
+        border: 1px solid $Color-Mustard;
+        padding: 1rem 2rem;
+        border-radius: 3.125rem;
+        align-self: center;
+    }
 }
