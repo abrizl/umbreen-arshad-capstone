@@ -63,8 +63,12 @@ function ContactUs() {
                 </form>
             </div>
             <div className="contact__subtitle">
-                <p className="contact__item">for immediate assistance:</p>
+                <p className="contact__item">for order support:</p>
                 <p className="contact__item">0303 726 9675</p>
+            </div>
+
+            <div className="contact__information">
+
             </div>
         </section>
     )

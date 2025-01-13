@@ -4,27 +4,23 @@
 //MOBILE
 
 @mixin headingMobile() {
-  font-family: 'Nexa';
   font-size: 1.125rem;
   line-height: 1.4375rem;
 }
 
 @mixin bodyCopyMobile() {
-  font-family: 'Nexa';
   font-size: 0.75rem;
   line-height: 0.9375rem;
   font-weight: Regular;
 }
 
 @mixin bodyCopyLightMobile() {
-  font-family: 'Nexa';
   font-size: 0.75rem;
   line-height: 0.9375rem;
   font-weight: Light;
 }
 
 @mixin labelMobile() {
-  font-family: 'Nexa';
   font-size: 0.75rem;
   line-height: 0.9375rem;
   font-weight: Regular;
