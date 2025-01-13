@@ -40,18 +40,35 @@
     width: 100%;
     box-sizing: border-box;
     
-    &__two {
+    &__information {
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
+        justify-content: center;
+        padding: 1.5rem 0 1.5rem 0;
+        gap: 0.5rem;
+    }   
 
-    &__item {
+    &__itemOne {
         flex: 1;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 0;
+    }
+
+    &__itemLeft {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    &__itemTwo {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     &__topText {
@@ -66,6 +83,14 @@
         font-size: 1.7rem;
         width: 100%;
         text-align: left;
+        line-height: 1;
+    }
+
+    &__underRight {
+        flex: 1;
+        font-size: 1.7rem;
+        width: 100%;
+        text-align: right;
         line-height: 1;
     }
 

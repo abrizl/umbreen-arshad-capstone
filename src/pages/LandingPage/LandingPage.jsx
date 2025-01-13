@@ -15,28 +15,28 @@ function LandingPage() {
             </section>
 
             <section className="why">
-                <div className="why__two">
-                    <div className="why__item">
-                        <p className="landing__description">from udders to bottle</p>
+                <div className="why__information">
+                    <div className="why__itemLeft">
+                        <p className="why__description">from udders to bottle</p>
                     </div>
-                    <div className="why__item">
+                    <div className="why__itemTwo">
                         <p className="why__topText">100%</p>
                         <p className="why__under">fresh, whole milk</p>
                     </div>
                 </div>
 
-                <div className="why__two">
-                    <div className="why__item">
-                        <p className="why__under">delivered twice</p>
+                <div className="why__information">
+                    <div className="why__itemLeft">
+                        <p className="why__underRight">delivered twice</p>
                         <p className="why__topText">daily</p>
                     </div>
-                    <div className="why__item">
-                        <p className="why__description">as per your needs and schedule</p>
+                    <div className="why__itemOne">
+                        <p className="why__description2">as per your needs and schedule</p>
                     </div>
                 </div>
 
-                <div className="why__two">
-                    <div className="why__item">
+                <div className="why__information">
+                    <div className="why__itemLeft">
                         <p className="why__description">we work with local farms to ensure quality and fair trade </p>
                     </div>
                     <div className="why__item">
@@ -45,17 +45,21 @@ function LandingPage() {
                     </div>
                 </div>
 
-                <div className="why__two">
-                    <div className="why__item">
-                        <p className="why__under">ditch the</p>
+                <div className="why__information">
+                    <div className="why__itemTwo">
+                        <p className="why__underRight">ditch the</p>
                         <p className="why__topText">plastic</p>
                     </div>
-                    <div className="why__item">
-                        <p className="why__description">join our efforts to reduce single-use plastics </p>
+                    <div className="why__itemOne">
+                        <p className="why__description2">join our efforts to reduce single-use plastics </p>
                     </div>
                 </div>
             </section>
-            
+
+            <section className="how">
+                Hello
+            </section>
+
         </section>
     )
 }
