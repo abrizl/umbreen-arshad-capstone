@@ -68,27 +68,27 @@ function ContactUs() {
 
             <div className="contact__information">
                 <div className="contact__subtitle">
-                    <p className="contact__item">for immediate order support:</p>
-                    <p className="contact__item">0303 726 9675</p>
+                    <p className="contact__text">for immediate order support:</p>
+                    <p className="contact__text">0303 726 9675</p>
                 </div>
 
                 <div className="contact__bundle">
 
                     <div className="contact__subtitle">
                         <p className="contact__heading">Address</p>
-                        <p className="contact__item">Unit 76F, Adyala Rd </p>
-                        <p className="contact__item">Ghauri Town, Rawalpindi</p>
+                        <p className="contact__text">Unit 76F, Adyala Rd </p>
+                        <p className="contact__text">Ghauri Town, Rawalpindi</p>
                     </div>
 
                     <div className="contact__subtitle">
-                        <p className="contact__heading">Business Hours</p>
-                        <p className="contact__item">Mon - Fri ... 9am - 9pm </p>
-                        <p className="contact__item">Sat - Sun ... 10am - 5pm </p>
+                        <p className="contact__heading">Hours</p>
+                        <p className="contact__text">Mon - Fri ... 9am - 9pm </p>
+                        <p className="contact__text">Sat - Sun ... 10am - 5pm </p>
                     </div>
 
                 </div>
 
-                <div className="contact__subtitle">
+                <div className="contact__icons">
                     <div className="contact__circle">
                         <img src={facebookIcon} alt="facebook icon" className='contact__icon'/>
                     </div>
