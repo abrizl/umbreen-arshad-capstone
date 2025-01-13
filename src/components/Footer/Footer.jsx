@@ -44,7 +44,6 @@ function Footer() {
                         <p className="footer__detail">info@milkotov.com</p>
                     </div>
                 </div>
-                <p className="footer__heading">Currently delivering in Rawalpindi</p>
 
 
             </div>
