@@ -58,7 +58,7 @@ function LandingPage({openModal}) {
                 </div>
             </section>
 
-            <button onclick={openModal} className="landing__button">
+            <button onClick={openModal} className="landing__button">
                     Schedule your delivery!
             </button>
 

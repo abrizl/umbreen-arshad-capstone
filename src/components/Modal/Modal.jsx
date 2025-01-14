@@ -1,8 +1,9 @@
 import React from "react";
 
 const Modal = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
-
+    if (!isOpen) {
+        return null;
+    }
   return (
     <div style={overlayStyle}>
       <div style={modalStyle}>
