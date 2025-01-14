@@ -41,6 +41,9 @@ function AboutPage() {
                     <div className="about__circle"></div>
                     <h3 className="about__subheading">Join the movement</h3>
                     <p className="about__detail">Choose milk that fights for purity.</p>
+                    <button className="about__button">
+                        Schedule your delivery!
+                    </button>
                 </div>
             </div>
         </section>
