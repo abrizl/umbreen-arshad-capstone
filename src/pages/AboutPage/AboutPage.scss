@@ -3,7 +3,7 @@
 @use '../../partials/variables' as *;
 
 .about {
-    padding: 4rem 1rem;
+    padding: 4rem 1rem 1rem;
     width: 100%;
 
     &__area {
@@ -16,6 +16,17 @@
     &__name {
         font-weight: 300;
         font-size:4rem;
+        line-height: 1;
+    }
+
+    &__pronounciation {
+        display: none;
+
+        font-weight: 500;
+    }
+
+    &__subtitle {
+        padding-top: 1.5rem;
     }
 
     &__why {
@@ -31,6 +42,8 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        padding: 2rem 1rem;
+
     }
 
     &__mission {
@@ -40,17 +53,23 @@
         width: 100%;
     }
 
-    &__circle {
-        height: 2rem;
-        width: 2rem;
-        border-radius: 50%;
-        background-color: $Color-Mustard;
+    &__image {
+        height: 2.5rem;
+        width: 2.5rem;
+        padding-bottom: 0.5rem;
     }
 
-    &__line {
-        height: 5rem;
-        width: 2px;
-        background: $Color-Mustard;
+    &__subheading {
+        font-weight: 400;
+        line-height: 1.5rem;
+        color: $Color-DarkGray;
+    }
+
+    &__detail {
+        font-weight: 300;
+        color: $Color-LightGray;
+        padding-top: 0.5rem;
+        text-align: center;
     }
 
     &__button {
@@ -68,4 +87,8 @@
             cursor: pointer;
         }
     }
+}
+
+.about__name:hover + .about__pronounciation {
+    display: block; 
 }
