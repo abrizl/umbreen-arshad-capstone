@@ -68,8 +68,8 @@ function ContactUs() {
 
             <div className="contact__information">
                 <div className="contact__subtitle">
-                    <p className="contact__text">for immediate order support:</p>
-                    <p className="contact__text">0303 726 9675</p>
+                    <p className="contact__heading">for immediate order support</p>
+                    <p className="contact__text">call us at 0303 726 9675</p>
                 </div>
 
                 <div className="contact__bundle">
