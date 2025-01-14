@@ -33,7 +33,7 @@ function AppContent() {
 
       <Routes>
         <Route path="/" element={<LandingPage openModal={openModal}/> } />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/about" element={<AboutPage openModal={openModal} />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       {shouldShowFooter && <Footer />}

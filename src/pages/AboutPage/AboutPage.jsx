@@ -1,7 +1,7 @@
 import './AboutPage.scss';
 import milkotovIcon from "../../assets/icons/milkotovIcon-01.svg";
 
-function AboutPage() {
+function AboutPage({openModal}) {
     return (
         <section className="about">
             <div className="about__area">
@@ -39,7 +39,7 @@ function AboutPage() {
                     <img src={milkotovIcon} alt="milkotov icon" className='about__image'/>
                     <h3 className="about__subheading">Join the movement</h3>
                     <p className="about__detail">Choose milk that fights for purity.</p>
-                    <button className="about__button">
+                    <button onClick={openModal} className="about__button">
                         Schedule your delivery!
                     </button>
                 </div>
