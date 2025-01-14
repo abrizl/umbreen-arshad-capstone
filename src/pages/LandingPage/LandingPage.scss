@@ -12,7 +12,6 @@
 
 .landing {
     display: grid;
-    place-items: center;
     position: relative;
     
     &__image {
@@ -20,24 +19,54 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
-
-        position: relative;
+        grid-area: 1 / 1;
     }
 
     &__overlay {
-        position: absolute;
+        grid-area: 1 / 1;
+        display: grid;
         z-index: 1;
+        position: relative;
+    }
+
+    &__subheading {
+        color: $Color-Mustard;
+        z-index: 3;
+        position: absolute;
+        top: 8%;
+        left: 5%;
+        font-size: 1.8rem;
+        
     }
 
     &__heading {
         color: $Color-Mustard;
-        
+        position: absolute;
+        top: 13%;
+        left: 15%;
+        font-size: 1.8rem;
+    }
+
+    &__button {
+        padding: 1rem 5rem;
+        border: 1px solid $Color-Mustard;
+        background: $Color-Mustard;
+        border-radius: 3.125rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        margin: 1rem;
+        align-self: center;
+
+        &:hover, &:active {
+            background: $Color-DarkGray;
+            border: 1px solid $Color-DarkGray;
+            color: $Color-Mustard;
+            cursor: pointer;
+        }
     }
 }
 
 .why {
     padding: 0 1rem 1rem 1rem;
-    width: 100%;
     box-sizing: border-box;
     
     &__information {

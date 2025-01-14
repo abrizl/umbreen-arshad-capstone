@@ -2,7 +2,7 @@ import './LandingPage.scss';
 import banner from '../../assets/images/Continuous Banner-01.png';
 
 
-function LandingPage() {
+function LandingPage({openModal}) {
     return (
 
         <section className="page">
@@ -10,7 +10,9 @@ function LandingPage() {
             <section className="landing">
                 <img src={banner} alt="milk pour on dark background" className="landing__image"/> 
                 <div className="landing__overlay">
-                    <p className="landing__heading">farm fresh</p>
+                    <p className="landing__subheading">go ahead...</p>
+                    <p className="landing__heading">pour a glass</p>
+
                 </div>
             </section>
 
@@ -56,9 +58,9 @@ function LandingPage() {
                 </div>
             </section>
 
-            <section className="how">
-                Hello
-            </section>
+            <button onclick={openModal} className="landing__button">
+                    Schedule your delivery!
+            </button>
 
         </section>
     )
