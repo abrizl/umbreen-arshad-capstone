@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import Modal from './components/Modal/Modal';
+import SchedulePage from './pages/SchedulePage/SchedulePage';
 
 
 
@@ -35,6 +36,7 @@ function AppContent() {
         <Route path="/" element={<LandingPage openModal={openModal}/> } />
         <Route path="/about" element={<AboutPage openModal={openModal} />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/schedule-delivery" element={<SchedulePage />} />
       </Routes>
       {shouldShowFooter && <Footer />}
     </>
