@@ -1,0 +1,11 @@
+@use '../../partials//global' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 1rem;
+    gap: 0.5rem;
+}

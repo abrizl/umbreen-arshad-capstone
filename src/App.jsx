@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import Modal from './components/Modal/Modal';
 import SchedulePage from './pages/SchedulePage/SchedulePage';
+import LoginTab from './components/LoginTab/LoginTab';
 
 
 
@@ -24,6 +25,7 @@ function AppContent() {
 
   return (
     <>
+      <LoginTab/>
       <Header />
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
