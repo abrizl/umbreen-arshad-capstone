@@ -178,7 +178,7 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
 
                 {/* Date Range Picker */}
                 <div className="form__date-picker">
-                    <label className="contact__label">Select Delivery Date</label>
+                    <label className="contact__label">Delivery Date</label>
                     <DatePicker
                         selectsRange
                         startDate={deliveryDates[0]}
@@ -194,7 +194,7 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
                 
                 {/* Delivery Time Slots */}
                 <div className="form__checkbox">
-                    <p className="contact__label">Select Delivery Time</p>
+                    <p className="contact__label">Delivery Time</p>
                     <label className='form__checkarea'>
                         <input
                             type="checkbox"
