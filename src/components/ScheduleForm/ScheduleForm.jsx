@@ -84,6 +84,20 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
         try {
             await scheduleDelivery(deliveryData);
             alert('Delivery scheduled successfully!');
+
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                address: '',
+                city: '',
+                deliveryArea: '',
+                deliveryTime: []
+              });
+          
+              setSelectedCity('');             // Reset city dropdown
+              setSelectedArea('');             // Reset area dropdown
+              setDeliveryDates([new Date(), new Date()]); 
         } catch (err) {
             console.error('Error scheduling delivery:', err);
             alert('Error scheduling delivery. Please try again.');
