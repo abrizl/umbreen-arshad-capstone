@@ -10,7 +10,7 @@ export const fetchCities = async () => {
   
 // Fetch areas for a specific city
 export const fetchAreasByCity = async (cityId) => {
-const response = await axios.get(`${API_BASE_URL}/areas/${cityId}`);
+const response = await axios.get(`${API_BASE_URL}/areas/${cityId}/areas`);
 return response.data;
 };
 
