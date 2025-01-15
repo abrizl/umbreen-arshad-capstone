@@ -92,7 +92,7 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
 
     return (
         <section className="form">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='form__area'>
                 {/* User Info */}
                 <div className="contact__item">
                     <label htmlFor="name" className="contact__label">Name:</label>
@@ -144,12 +144,13 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
 
                 {/* City Dropdown */}
                 <div className="form__location">
-                    <label htmlFor="city" className="form__name">Select City</label>
+                    <label htmlFor="city" className="contact__label">City</label>
                     <select
                         id="city"
                         value={formData.city}
                         onChange={handleCityChange}
                         required
+                        className="contact__form"
                     >
                         <option value="" disabled>Select City</option>
                         {cities.map(city => (
@@ -160,12 +161,13 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
 
                 {/* Area Dropdown */}
                 <div className="form__location">
-                    <label htmlFor="deliveryArea" className="form__name">Select Delivery Area</label>
+                    <label htmlFor="deliveryArea" className="contact__label">Delivery Area</label>
                     <select
                         id="deliveryArea"
                         value={formData.deliveryArea}
                         onChange={handleSelectChange}
                         required
+                        className="contact__form"
                     >
                         <option value="" disabled>Select Area</option>
                         {Array.isArray(selectedArea) && selectedArea.map(area => (
@@ -174,9 +176,26 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
                     </select>
                 </div>
 
+                {/* Date Range Picker */}
+                <div className="form__date-picker">
+                    <label className="contact__label">Select Delivery Date</label>
+                    <DatePicker
+                        selectsRange
+                        startDate={deliveryDates[0]}
+                        endDate={deliveryDates[1]}
+                        onChange={(update) => setDeliveryDates(update)}
+                        isClearable={true}
+                        minDate={new Date()}
+                        dateFormat="yyyy-MM-dd"
+                        className="contact__form"
+                    />
+                </div>
+
+                
                 {/* Delivery Time Slots */}
                 <div className="form__checkbox">
-                    <label>
+                    <p className="contact__label">Select Delivery Time</p>
+                    <label className='form__checkarea'>
                         <input
                             type="checkbox"
                             name="deliveryTime"
@@ -187,7 +206,7 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
                         Morning - 8am to 10am
                     </label>
 
-                    <label>
+                    <label className='form__checkarea'>
                         <input
                             type="checkbox"
                             name="deliveryTime"
@@ -197,20 +216,6 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
                         />
                         Evening - 6pm to 8pm
                     </label>
-                </div>
-
-                {/* Date Range Picker */}
-                <div className="form__date-picker">
-                    <label>Select Delivery Dates:</label>
-                    <DatePicker
-                        selectsRange
-                        startDate={deliveryDates[0]}
-                        endDate={deliveryDates[1]}
-                        onChange={(update) => setDeliveryDates(update)}
-                        isClearable={true}
-                        minDate={new Date()}
-                        dateFormat="yyyy-MM-dd"
-                    />
                 </div>
 
                 {/* Submit Button */}

@@ -1,3 +1,28 @@
 @use '../../partials//global' as *;
 @use '../../partials/mixins' as *;
 @use '../../partials/variables' as *;
+
+.form {
+    padding: 1rem 2rem;
+    @include bodyCopyMobile();
+
+    &__area {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;  
+    }
+  
+
+    &__checkbox {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__checkarea {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+}
