@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage/ContactPage';
 import Modal from './components/Modal/Modal';
 import SchedulePage from './pages/SchedulePage/SchedulePage';
 import LoginTab from './components/LoginTab/LoginTab';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 
 
@@ -39,6 +40,7 @@ function AppContent() {
         <Route path="/about" element={<AboutPage openModal={openModal} />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/schedule-delivery" element={<SchedulePage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
       {shouldShowFooter && <Footer />}
     </>
