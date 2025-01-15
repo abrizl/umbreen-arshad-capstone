@@ -25,4 +25,24 @@
         gap: 0.5rem;
         padding: 0 1rem;
     }
+
+    &__button {
+        padding: 1rem 5rem;
+        border: 1px solid $Color-Mustard;
+        background: $Color-Mustard;
+        border-radius: 3.125rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        margin-top: 1rem;
+
+        &:hover, &:active {
+            background: $Color-DarkGray;
+            border: 1px solid $Color-DarkGray;
+            color: $Color-Mustard;
+            cursor: pointer;
+        }
+    }
+}
+
+input, textarea {
+    font-size: 1rem;
 }

@@ -219,7 +219,7 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
                 </div>
 
                 {/* Submit Button */}
-                <button type="submit" className="form__submit">Submit</button>
+                <button type="submit" className="form__button">Submit</button>
             </form>
         </section>
     );
