@@ -18,7 +18,7 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
         city: '',
         deliveryArea: '',
         deliveryTime: [],
-        quantity: ''
+        quantity: 1
     });
 
     useEffect(() => {
@@ -67,18 +67,21 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
     };
 
     const handleQuantityChange = (e) => {
-        const value = parseInt(e.target.value, 10);
+        const value = e.target.value;
     
-        if (value >= 1) {
+        if (value === '') {
             setFormData((prevData) => ({
                 ...prevData,
-                quantity: value
+                quantity: ''
             }));
         } else {
-            setFormData((prevData) => ({
-                ...prevData,
-                quantity: 1  
-            }));
+            const parsedValue = parseInt(value, 10);
+            if (parsedValue >= 1) {
+                setFormData((prevData) => ({
+                    ...prevData,
+                    quantity: parsedValue
+                }));
+            }
         }
     };
 
