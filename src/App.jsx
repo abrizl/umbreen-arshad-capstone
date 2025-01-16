@@ -10,6 +10,7 @@ import Modal from './components/Modal/Modal';
 import SchedulePage from './pages/SchedulePage/SchedulePage';
 import LoginTab from './components/LoginTab/LoginTab';
 import LoginPage from './pages/LoginPage/LoginPage';
+import DashboardPage from './pages/DashboardPage/DashboardPage';
 
 
 
@@ -41,6 +42,8 @@ function AppContent() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/schedule-delivery" element={<SchedulePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/dashboard" element={<DashboardPage/>} />
+
       </Routes>
       {shouldShowFooter && <Footer />}
     </>
