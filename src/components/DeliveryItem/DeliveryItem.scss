@@ -12,6 +12,9 @@
         align-items: flex-start;
         justify-content: space-between;
         gap: 0.5rem;
+        padding: 1rem 0;
+
+        border-bottom: 0.25px solid rgba($Color-DarkGray, 0.3);
     }
     &__bottle {
         max-width: 2rem;
