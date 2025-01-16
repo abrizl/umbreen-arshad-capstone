@@ -1,3 +1,14 @@
 @use '../../partials//global' as *;
 @use '../../partials/mixins' as *;
 @use '../../partials/variables' as *;
+
+.overview {
+    margin: 1rem;
+
+    &__card {
+        margin: 1rem;
+        border: 1px solid $Color-Mustard;
+        
+
+    }
+}
