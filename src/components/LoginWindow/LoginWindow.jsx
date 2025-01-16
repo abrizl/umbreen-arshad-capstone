@@ -11,21 +11,46 @@ function LoginWindow() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
+        // Password confirmation check (only for registration)
         if (isRegister && password !== confirmPassword) {
             alert("Passwords do not match");
             return;
         }
-
-        const salt = await bcrypt.genSalt(10);
-        const hashedPassword = await bcrypt.hash(password, salt);
-
-        if (isRegister) {
-            console.log("Registering with:", { email, hashedPassword });
-            // Handle registration logic (API call)
-        } else {
-            console.log("Logging in with:", { email, hashedPassword });
-            // Handle login logic (API call)
+    
+        const endpoint = isRegister 
+            ? 'http://localhost:5000/api/auth/register' 
+            : 'http://localhost:5000/api/auth/login';
+    
+        const payload = { email, password };
+    
+        try {
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+    
+            const data = await response.json();
+    
+            if (response.ok) {
+                // Save JWT token for session management
+                localStorage.setItem('token', data.token);
+    
+                alert(isRegister ? 'Registration successful!' : 'Login successful!');
+                
+                setEmail('');
+                setPassword('');
+                setConfirmPassword('');
+                
+                // Redirect user after successful login/registration
+                window.location.href = '/dashboard'; 
+            } else {
+                alert(data.error);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Something went wrong. Please try again later.');
         }
     };
 
