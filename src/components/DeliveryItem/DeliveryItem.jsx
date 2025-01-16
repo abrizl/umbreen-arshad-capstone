@@ -10,15 +10,17 @@ function DeliveryItem({delivery}) {
     return(
         <section className="deliveryinfo">
             <div className="deliveryinfo__area">
-                <img src={milkotovBottle} alt='milkotov milk bottle' className='deliveryinfo__bottle'/>
-                
-                <div className="deliveryinfo__box">
-                    <div className="deliveryinfo__date">
-                        {formatDate(delivery.scheduled_date)}
-                    </div>
+                <div className="deliveryinfo__section">
+                    <img src={milkotovBottle} alt='milkotov milk bottle' className='deliveryinfo__bottle'/>
+                    
+                    <div className="deliveryinfo__box">
+                        <div className="deliveryinfo__date">
+                            {formatDate(delivery.scheduled_date)}
+                        </div>
 
-                    <div className="deliveryinfo__address">
-                        {delivery.address}
+                        <div className="deliveryinfo__address">
+                            {delivery.address}
+                        </div>
                     </div>
                 </div>
 

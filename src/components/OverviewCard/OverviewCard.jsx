@@ -39,8 +39,23 @@ function OverviewCard() {
     return(
         <section className="overview">
             <div className="overview__card">
+                
                 <div className="overview__one">
                     <h3 className="overview__heading">Upcoming deliveries</h3>
+                    <div className="deliveryinfo__heading">
+                        <div className="deliveryinfo__part">
+                            <p className="deliveryinfo__label">Date & Address</p>
+                        </div>
+                        <div className="deliveryinfo__part">
+                            <p className="deliveryinfo__label">Delivery Time</p>
+                        </div>
+                        <div className="deliveryinfo__part">
+                            <p className="deliveryinfo__label">Quantity</p>
+                        </div>
+                        <div className="deliveryinfo__part">
+                            <p className="deliveryinfo__label">Status</p>
+                        </div>
+                    </div>
                     {isLoading ? (
                         <p>Loading deliveries...</p>
                     ) : error ? (

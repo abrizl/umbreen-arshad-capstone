@@ -6,11 +6,27 @@
     padding: 1rem;
     width: 100%;
 
+    &__heading {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.25px solid $Color-LightGray;
+        margin: 0 2rem;
+    }
+
     &__area {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: row;
         gap: 0.5rem;
     }
     &__bottle {
