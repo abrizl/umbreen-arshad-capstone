@@ -34,7 +34,18 @@
     &__box {
         display: flex;
         flex-direction: row;
+    }
 
+    &__quantity-controls {
+        display: flex;
+        flex-direction: row;
+    
+    }
+
+    &__control {
+        border: none;
+        padding: 0.5rem;
+     
     }
 
     &__button {

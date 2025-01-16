@@ -257,6 +257,7 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
                         <div className="form__quantity-controls">
                             <button 
                                 type="button" 
+                                className='form__control'
                                 onClick={() => setFormData(prevData => ({
                                     ...prevData,
                                     quantity: Math.max(1, prevData.quantity - 1)
@@ -276,6 +277,7 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
 
                             <button 
                                 type="button" 
+                                className='form__control'
                                 onClick={() => setFormData(prevData => ({
                                     ...prevData,
                                     quantity: prevData.quantity + 1
