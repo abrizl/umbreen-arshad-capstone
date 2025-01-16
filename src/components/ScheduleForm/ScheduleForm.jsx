@@ -17,7 +17,8 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
         address: '',
         city: '',
         deliveryArea: '',
-        deliveryTime: []
+        deliveryTime: [],
+        quantity: ''
     });
 
     useEffect(() => {
@@ -65,6 +66,22 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
         });
     };
 
+    const handleQuantityChange = (e) => {
+        const value = parseInt(e.target.value, 10);
+    
+        if (value >= 1) {
+            setFormData((prevData) => ({
+                ...prevData,
+                quantity: value
+            }));
+        } else {
+            setFormData((prevData) => ({
+                ...prevData,
+                quantity: 1  
+            }));
+        }
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -78,7 +95,8 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
             name: formData.name,
             email: formData.email,
             phone_number: formData.phone,
-            address: formData.address
+            address: formData.address,
+            quantity: formData.quantity
         };
 
         try {
@@ -92,11 +110,12 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
                 address: '',
                 city: '',
                 deliveryArea: '',
-                deliveryTime: []
+                deliveryTime: [],
+                quantity: 1
               });
           
-              setSelectedCity('');             // Reset city dropdown
-              setSelectedArea('');             // Reset area dropdown
+              setSelectedCity('');             
+              setSelectedArea('');             
               setDeliveryDates([new Date(), new Date()]); 
         } catch (err) {
             console.error('Error scheduling delivery:', err);
@@ -205,32 +224,66 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
                     />
                 </div>
 
-                
-                {/* Delivery Time Slots */}
-                <div className="form__checkbox">
-                    <p className="contact__label">Delivery Time</p>
-                    <label className='form__checkarea'>
-                        <input
-                            type="checkbox"
-                            name="deliveryTime"
-                            value="Morning"
-                            checked={formData.deliveryTime.includes('Morning')}
-                            onChange={handleCheckboxChange}
-                        />
-                        Morning - 8am to 10am
-                    </label>
+                <div className="form__box">
+                    {/* Delivery Time Slots */}
+                    <div className="form__checkbox">
+                        <p className="contact__label">Delivery Time</p>
+                        <label className='form__checkarea'>
+                            <input
+                                type="checkbox"
+                                name="deliveryTime"
+                                value="Morning"
+                                checked={formData.deliveryTime.includes('Morning')}
+                                onChange={handleCheckboxChange}
+                            />
+                            Morning - 8am to 10am
+                        </label>
 
-                    <label className='form__checkarea'>
-                        <input
-                            type="checkbox"
-                            name="deliveryTime"
-                            value="Evening"
-                            checked={formData.deliveryTime.includes('Evening')}
-                            onChange={handleCheckboxChange}
-                        />
-                        Evening - 6pm to 8pm
-                    </label>
-                </div>
+                        <label className='form__checkarea'>
+                            <input
+                                type="checkbox"
+                                name="deliveryTime"
+                                value="Evening"
+                                checked={formData.deliveryTime.includes('Evening')}
+                                onChange={handleCheckboxChange}
+                            />
+                            Evening - 6pm to 8pm
+                        </label>
+                    </div>
+
+                    {/* Quantity Selector */}
+                    <div className="form__quantity">
+                        <label htmlFor="quantity" className="contact__label">Quantity (Litres)</label>
+                        <div className="form__quantity-controls">
+                            <button 
+                                type="button" 
+                                onClick={() => setFormData(prevData => ({
+                                    ...prevData,
+                                    quantity: Math.max(1, prevData.quantity - 1)
+                                }))}
+                            >-</button>
+
+                            <input
+                                type="number"
+                                id="quantity"
+                                className="contact__form"
+                                min="1"
+                                step="1"
+                                value={formData.quantity}
+                                onChange={handleQuantityChange}
+                                required
+                            />
+
+                            <button 
+                                type="button" 
+                                onClick={() => setFormData(prevData => ({
+                                    ...prevData,
+                                    quantity: prevData.quantity + 1
+                                }))}
+                            >+</button>
+                        </div>
+                    </div>
+                </div>    
 
                 {/* Submit Button */}
                 <button type="submit" className="form__button">Submit</button>
