@@ -1,3 +1,4 @@
+import DeliveryItem from '../DeliveryItem/DeliveryItem';
 import './OverviewCard.scss';
 import { useState, useEffect } from 'react';
 
@@ -50,7 +51,7 @@ function OverviewCard() {
                         <ul className="overview__list">
                             {deliveries.map((delivery) => (
                                 <li key={delivery.id} className="overview__item">
-                                    {delivery.scheduled_date} - {delivery.delivery_slot} - {delivery.status}
+                                    <DeliveryItem delivery={delivery} />
                                 </li>
                             ))}
                         </ul>
