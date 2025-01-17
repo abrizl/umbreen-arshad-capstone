@@ -1,4 +1,5 @@
 import './LandingPage.scss';
+import { Link } from 'react-router-dom';
 import banner from '../../assets/images/Continuous Banner-01.png';
 import mBottle from '../../assets/images/mBottle-01.svg';
 import dayNight from '../../assets/images/timing-02.svg';
@@ -61,9 +62,11 @@ function LandingPage({openModal}) {
                 </div>
             </section>
 
-            <button onClick={openModal} className="landing__button">
+            <Link to='/schedule-delivery'>
+                <button className="landing__button">
                     Schedule your delivery!
-            </button>
+                </button>
+            </Link> 
 
         </section>
     )
