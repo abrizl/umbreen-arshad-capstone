@@ -1,5 +1,6 @@
 import './LandingPage.scss';
 import banner from '../../assets/images/Continuous Banner-01.png';
+import mBottle from '../../assets/images/mBottle-01.svg';
 
 
 function LandingPage({openModal}) {
@@ -19,9 +20,10 @@ function LandingPage({openModal}) {
             <section className="why">
                 <div className="why__information">
                     <div className="why__itemLeft">
-                        <p className="why__description">from udders to bottle</p>
+                        <img src={mBottle} alt="milk bottle with milkotov logo" className="why__image"/>
                     </div>
                     <div className="why__itemTwo">
+                        <p className="why__description">from udders to bottle</p>
                         <p className="why__topText">100%</p>
                         <p className="why__under">fresh, whole milk</p>
                     </div>
@@ -29,8 +31,9 @@ function LandingPage({openModal}) {
 
                 <div className="why__information">
                     <div className="why__itemLeft">
-                        <p className="why__underRight">delivered twice</p>
+                        <p className="why__underRight">we deliver twice</p>
                         <p className="why__topText">daily</p>
+                        <p className="why__description2">adjustable to your needs and schedule</p>
                     </div>
                     <div className="why__itemOne">
                         <p className="why__description2">adjustable to your needs and schedule</p>
@@ -42,8 +45,9 @@ function LandingPage({openModal}) {
                         <p className="why__description">our local farm ensures</p>
                     </div>
                     <div className="why__item">
-                        <p className="why__under">superior</p>
-                        <p className="why__topText">quality</p>
+                        <p className="why__description">our local farm ensures</p>
+                        <p className="why__topText">no</p>
+                        <p className="why__under">additives</p>
                     </div>
                 </div>
 
@@ -51,6 +55,8 @@ function LandingPage({openModal}) {
                     <div className="why__itemTwo">
                         <p className="why__underRight">ditch the</p>
                         <p className="why__topText">plastic</p>
+                        <p className="why__description2">join our efforts to reduce single-use plastics </p>
+
                     </div>
                     <div className="why__itemOne">
                         <p className="why__description2">join our efforts to reduce single-use plastics </p>

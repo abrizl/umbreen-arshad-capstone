@@ -5,7 +5,7 @@
 .page {
     display:flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
 
 }   
@@ -68,7 +68,6 @@
 .why {
     padding: 0 1rem 1rem 1rem;
     box-sizing: border-box;
-    margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +80,6 @@
         justify-content: center;
         padding: 1.5rem 0 1.5rem 0;
         gap: 0.5rem;
-        width: 90%;
     }   
 
     &__itemOne {
@@ -127,6 +125,13 @@
         width: 100%;
         text-align: right;
         line-height: 1;
+    }
+
+    &__image {
+        width: 8rem;
+        height: 10rem;
+        max-width: 10rem;
+        max-height: 12rem;
     }
 
 }
