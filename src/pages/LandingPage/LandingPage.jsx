@@ -34,7 +34,7 @@ function LandingPage({openModal}) {
                     <div className="why__itemLeft">
                         <p className="why__underRight">delivering twice</p>
                         <p className="why__topText">daily</p>
-                        <p className="why__description2">as per your needs and schedule</p>
+                        <p className="why__description2">customizable to your needs and schedule</p>
                     </div>
                     <div className="why__itemOne">
                         <img src={dayNight} alt="day and night symbols" className="why__imagetwo"/>
