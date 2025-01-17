@@ -1,6 +1,7 @@
 import './LandingPage.scss';
 import banner from '../../assets/images/Continuous Banner-01.png';
 import mBottle from '../../assets/images/mBottle-01.svg';
+import dayNight from '../../assets/images/timing-02.svg';
 
 
 function LandingPage({openModal}) {
@@ -31,12 +32,12 @@ function LandingPage({openModal}) {
 
                 <div className="why__information">
                     <div className="why__itemLeft">
-                        <p className="why__underRight">we deliver twice</p>
+                        <p className="why__underRight">delivering twice</p>
                         <p className="why__topText">daily</p>
-                        <p className="why__description2">adjustable to your needs and schedule</p>
+                        <p className="why__description2">as per your needs and schedule</p>
                     </div>
                     <div className="why__itemOne">
-                        <p className="why__description2">adjustable to your needs and schedule</p>
+                        <img src={dayNight} alt="day and night symbols" className="why__imagetwo"/>
                     </div>
                 </div>
 
