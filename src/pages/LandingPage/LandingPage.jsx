@@ -46,7 +46,7 @@ function LandingPage({openModal}) {
                         <p className="why__description">our local farm ensures</p>
                     </div>
                     <div className="why__item">
-                        <p className="why__description">our local farm ensures</p>
+                        <p className="why__description">our farm ensures</p>
                         <p className="why__topText">no</p>
                         <p className="why__under">additives</p>
                     </div>
@@ -56,10 +56,6 @@ function LandingPage({openModal}) {
                     <div className="why__itemTwo">
                         <p className="why__underRight">ditch the</p>
                         <p className="why__topText">plastic</p>
-                        <p className="why__description2">join our efforts to reduce single-use plastics </p>
-
-                    </div>
-                    <div className="why__itemOne">
                         <p className="why__description2">join our efforts to reduce single-use plastics </p>
                     </div>
                 </div>
