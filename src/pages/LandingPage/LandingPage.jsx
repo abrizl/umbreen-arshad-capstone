@@ -33,17 +33,17 @@ function LandingPage({openModal}) {
                         <p className="why__topText">daily</p>
                     </div>
                     <div className="why__itemOne">
-                        <p className="why__description2">as per your needs and schedule</p>
+                        <p className="why__description2">adjustable to your needs and schedule</p>
                     </div>
                 </div>
 
                 <div className="why__information">
                     <div className="why__itemLeft">
-                        <p className="why__description">we work with local farms to ensure quality and fair trade </p>
+                        <p className="why__description">our local farm ensures</p>
                     </div>
                     <div className="why__item">
-                        <p className="why__under">support</p>
-                        <p className="why__topText">local</p>
+                        <p className="why__under">superior</p>
+                        <p className="why__topText">quality</p>
                     </div>
                 </div>
 
