@@ -1,4 +1,5 @@
 import './Footer.scss';
+import { Link } from 'react-router-dom';
 import bottle from '../../assets/images/Milkotov-Bottle-01.svg';
 
 function Footer() {
