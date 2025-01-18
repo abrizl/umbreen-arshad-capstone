@@ -4,7 +4,10 @@ import banner from '../../assets/images/Continuous Banner-01.png';
 import mBottle from '../../assets/images/mBottle-01.svg';
 import eveningIcon from '../../assets/images/evening.svg';
 import morningIcon from '../../assets/images/morning.svg';
-import farmIcon from '../../assets/images/farm.svg';
+import scheduleIcon from '../../assets/icons/schedule.svg';
+import deliveryIcon from '../../assets/icons/door-delivery.svg';
+import invoiceIcon from '../../assets/icons/invoice.svg';
+
 
 
 
@@ -56,23 +59,36 @@ function LandingPage({openModal}) {
                 </div>
 
                 <div className="why__details">
-                    <p className="why__underRight">delivering now</p>
-                    <p className="why__description"> in select areas of Rawalpindi and Islamabad</p>
-                </div>
-
-                <div className="why__details">
                     <p className="why__underRight">ditch the plastic</p>
                     <p className="why__description">join our efforts to reduce single-use plastics</p>
                 </div>
-            </section>
 
-            <div className="inset">
-                
-            </div>
+                <div className="why__inset">
+                    <h3 className="why__description">How it works</h3>
+                    <div className="why__category">
+                        <img src={scheduleIcon} alt="schedule" className='why__icons'/>
+                        <p className="why__caption">customize your delivery schedule online</p>
+                    </div>
+                    <div className="why__category">
+                        <img src={deliveryIcon} alt="delivery" className='why__icons'/>
+                        <p className="why__caption">we deliver to your door</p>
+                    </div>
+                    <div className="why__category">
+                        <img src={invoiceIcon} alt="invoice" className='why__icons'/>
+                        <p className="why__caption">receive a monthly invoice</p>
+                    </div>
+                </div>
+
+                <div className="why__details">
+                    <p className="why__underRight">open for delivery</p>
+                    <p className="why__description"> in select parts of Rawalpindi and Islamabad</p>
+                </div>
+
+            </section>
 
             <Link to='/schedule-delivery'>
                 <button className="landing__button">
-                    Schedule your delivery!
+                    Check your area now!
                 </button>
             </Link> 
 

@@ -11,6 +11,7 @@ import SchedulePage from './pages/SchedulePage/SchedulePage';
 import LoginTab from './components/LoginTab/LoginTab';
 import LoginPage from './pages/LoginPage/LoginPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
+import ScrollToTop from './components/ScrollTop/ScrollTop';
 
 
 
@@ -27,6 +28,7 @@ function AppContent() {
 
   return (
     <>
+    <ScrollToTop/>
       <LoginTab/>
       <Header />
 
