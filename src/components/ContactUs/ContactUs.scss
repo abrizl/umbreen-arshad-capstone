@@ -76,11 +76,7 @@
         border:none;
         border-radius: 3.125rem;
         background-color: $Color-LightMustard ;
-        padding: 0.5rem 1rem;
-
-        font-family: 'poppins';
-        font-size: 1.3rem;
-
+        padding: 1rem 1.5rem;
         width: 100%;
 
         &:active, &:focus {
@@ -100,9 +96,6 @@
         border-radius: 1rem;
         background-color: $Color-LightMustard ;
         padding: 0.5rem 1rem;
-
-        font-family: 'poppins';
-        font-size: 1.3rem;
 
         width: 100%;
         height: 6rem;

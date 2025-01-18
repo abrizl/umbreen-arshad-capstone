@@ -1,4 +1,5 @@
 import './AboutPage.scss';
+import { Link } from 'react-router-dom';
 import milkotovIcon from "../../assets/icons/milkotovIcon-01.svg";
 
 function AboutPage({openModal}) {
@@ -39,9 +40,11 @@ function AboutPage({openModal}) {
                     <img src={milkotovIcon} alt="milkotov icon" className='about__image'/>
                     <h3 className="about__subheading">Join the movement</h3>
                     <p className="about__detail">Choose milk that fights for purity.</p>
-                    <button onClick={openModal} className="about__button">
-                        Schedule your delivery!
-                    </button>
+                    <Link to='/schedule-delivery'>
+                        <button className="about__button">
+                            Schedule your delivery!
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>
