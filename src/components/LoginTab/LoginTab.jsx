@@ -32,7 +32,7 @@ function LoginTab() {
 
     return (
         <section className="container">
-                       <div className="container__items" ref={dropdownRef}>
+            <div className="container__items" ref={dropdownRef}>
                 {isLoggedIn ? (
                     <div className="dropdown">
                         <div

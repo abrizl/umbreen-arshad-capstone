@@ -1,7 +1,8 @@
 import './DeliveryItem.scss';
 import milkotovBottle from "../../assets/images/milkotov-Bottle-01.svg";
+import { UNSAFE_getPatchRoutesOnNavigationFunction } from 'react-router-dom';
 
-function DeliveryItem({delivery}) {
+function DeliveryItem({delivery, openModal}) {
     const formatDate = (dateString) => {
         const options = { month: 'short', day: '2-digit', year: 'numeric' };
         return new Date(dateString).toLocaleDateString('en-US', options).replace(',', '');
@@ -34,6 +35,10 @@ function DeliveryItem({delivery}) {
 
                 <div className="deliveryinfo__status">
                     {delivery.status}
+                </div>
+
+                <div className="deliveryinfo__status">
+                    <button onClick={openModal} className="deliveryinfo__editbutton">Edit</button>
                 </div>
 
             </div>

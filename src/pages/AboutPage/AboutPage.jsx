@@ -2,7 +2,7 @@ import './AboutPage.scss';
 import { Link } from 'react-router-dom';
 import milkotovIcon from "../../assets/icons/milkotovIcon-01.svg";
 
-function AboutPage({openModal}) {
+function AboutPage() {
     return (
         <section className="about">
             <div className="about__area">
