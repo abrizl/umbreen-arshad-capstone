@@ -37,38 +37,32 @@ function LandingPage({openModal}) {
 
                 <div className="why__details">
                     <p className="why__underRight">delivering twice daily</p>
-                    <p className="why__description2">customizable to your needs and schedule</p>
+                    <p className="why__description">customizable to your needs and schedule</p>
                     <div className="why__cutout">
                         <div className="why__box">
                             <img src={morningIcon} alt="yellow sunrise" className='why__icon'/>
-                            <p className="why__description2">morning: between 8am and 10am</p>
+                            <p className="why__description">morning: between 8am and 10am</p>
                         </div>
                         <div className="why__box">
                             <img src={eveningIcon} alt="gray sunset" className='why__icon'/>
-                            <p className="why__description2">evening: between 6pm and 8pm</p>
+                            <p className="why__description">evening: between 6pm and 8pm</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="why__details">
                     <p className="why__underRight">no additives</p>
-                    <p className="why__description2">our local farm ensures quality and trust</p>
-                    <div className="why__cutout">
-                        <div className="why__box">
-                            <img src={farmIcon} alt="buffaloes grazing" className='why__icon'/>
-                            <p className="why__description2">morning delivery between 8am and 10am</p>
-                        </div>
-                    </div>
+                    <p className="why__description">our local farm ensures quality and trust</p>
                 </div>
 
+                <div className="why__details">
+                    <p className="why__underRight">delivering now</p>
+                    <p className="why__description"> in select areas of Rawalpindi and Islamabad</p>
+                </div>
 
-
-                <div className="why__information">
-                    <div className="why__itemTwo">
-                        <p className="why__underRight">ditch the</p>
-                        <p className="why__topText">plastic</p>
-                        <p className="why__description2">join our efforts to reduce single-use plastics </p>
-                    </div>
+                <div className="why__details">
+                    <p className="why__underRight">ditch the plastic</p>
+                    <p className="why__description">join our efforts to reduce single-use plastics</p>
                 </div>
             </section>
 
