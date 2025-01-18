@@ -2,7 +2,11 @@ import './LandingPage.scss';
 import { Link } from 'react-router-dom';
 import banner from '../../assets/images/Continuous Banner-01.png';
 import mBottle from '../../assets/images/mBottle-01.svg';
-import dayNight from '../../assets/images/timing-02.svg';
+import eveningIcon from '../../assets/images/evening.svg';
+import morningIcon from '../../assets/images/morning.svg';
+import farmIcon from '../../assets/images/farm.svg';
+
+
 
 
 function LandingPage({openModal}) {
@@ -31,27 +35,33 @@ function LandingPage({openModal}) {
                     </div>
                 </div>
 
-                <div className="why__information">
-                    <div className="why__itemLeft">
-                        <p className="why__underRight">delivering twice</p>
-                        <p className="why__topText">daily</p>
-                        <p className="why__description2">customizable to your needs and schedule</p>
-                    </div>
-                    <div className="why__itemOne">
-                        <img src={dayNight} alt="day and night symbols" className="why__imagetwo"/>
+                <div className="why__details">
+                    <p className="why__underRight">delivering twice daily</p>
+                    <p className="why__description2">customizable to your needs and schedule</p>
+                    <div className="why__cutout">
+                        <div className="why__box">
+                            <img src={morningIcon} alt="yellow sunrise" className='why__icon'/>
+                            <p className="why__description2">morning: between 8am and 10am</p>
+                        </div>
+                        <div className="why__box">
+                            <img src={eveningIcon} alt="gray sunset" className='why__icon'/>
+                            <p className="why__description2">evening: between 6pm and 8pm</p>
+                        </div>
                     </div>
                 </div>
 
-                <div className="why__information">
-                    <div className="why__itemLeft">
-                        <p className="why__description">our local farm ensures</p>
-                    </div>
-                    <div className="why__item">
-                        <p className="why__description">our farm ensures</p>
-                        <p className="why__topText">no</p>
-                        <p className="why__under">additives</p>
+                <div className="why__details">
+                    <p className="why__underRight">no additives</p>
+                    <p className="why__description2">our local farm ensures quality and trust</p>
+                    <div className="why__cutout">
+                        <div className="why__box">
+                            <img src={farmIcon} alt="buffaloes grazing" className='why__icon'/>
+                            <p className="why__description2">morning delivery between 8am and 10am</p>
+                        </div>
                     </div>
                 </div>
+
+
 
                 <div className="why__information">
                     <div className="why__itemTwo">
