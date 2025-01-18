@@ -6,7 +6,9 @@ function Header() {
     return (
         <section className="headerContainer">
             <div className="header">
-                <img src={milkotovLogo} alt="Milkotov logo" className="header__logo"/>
+                <Link className='header__name' to='/'>
+                    <img src={milkotovLogo} alt="Milkotov logo" className="header__logo"/>
+                </Link>
                 <div className="header__navigation">
                     <Link to= "/" className="header__link">Home</Link>
                     <Link to= "/about" className="header__link">About</Link>

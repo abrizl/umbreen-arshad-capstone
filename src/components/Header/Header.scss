@@ -31,11 +31,16 @@
         justify-content: center;
     }
 
+    &__name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     &__logo {
         padding-top: 1rem;
         max-width: 10rem;
         max-height: 10rem;
-        align-self: center;
     }
 
     &__button {
