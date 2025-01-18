@@ -3,7 +3,7 @@ import './OverviewCard.scss';
 import { useState, useEffect } from 'react';
 
 
-function OverviewCard({openModal}) {
+function OverviewCard({openModal, fetchDeliveries}) {
     const [deliveries, setDeliveries] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -69,7 +69,7 @@ function OverviewCard({openModal}) {
                         <ul className="overview__list">
                             {deliveries.map((delivery) => (
                                 <li key={delivery.id} className="overview__item">
-                                    <DeliveryItem delivery={delivery} openModal={openModal} />
+                                    <DeliveryItem key={delivery.id} delivery={delivery} openModal={openModal} fetchDeliveries={fetchDeliveries} />
                                 </li>
                             ))}
                         </ul>

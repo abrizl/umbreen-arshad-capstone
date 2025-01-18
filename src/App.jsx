@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css'
 import {BrowserRouter, Routes, Route, useLocation} from 'react-router-dom';
 import Header from './components/Header/Header';
@@ -12,6 +13,7 @@ import LoginTab from './components/LoginTab/LoginTab';
 import LoginPage from './pages/LoginPage/LoginPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
 import ScrollToTop from './components/ScrollTop/ScrollTop';
+import EditDelivery from './components/EditDelivery/EditDelivery';
 
 
 
@@ -22,9 +24,32 @@ function AppContent() {
   const shouldShowFooter = !noFooterRoutes.includes(location.pathname);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const [selectedDeliveryId, setSelectedDeliveryId] = useState(null);
 
+  const openModal = (id) => {
+    setSelectedDeliveryId(id); 
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+      setIsModalOpen(false);
+      setSelectedDeliveryId(null);
+  };
+
+  const [deliveries, setDeliveries] = useState([]);
+  const fetchDeliveries = async () => {
+    try {
+        const response = await axios.get('http://localhost:5000/api/deliveries');
+        const sortedDeliveries = response.data.sort((a, b) => new Date(a.scheduled_date) - new Date(b.scheduled_date));
+        setDeliveries(sortedDeliveries);
+    } catch (error) {
+        console.error('Error fetching deliveries:', error);
+    }
+  };
+
+  useEffect(() => {
+      fetchDeliveries();
+  }, []);
 
   return (
     <>
@@ -32,11 +57,12 @@ function AppContent() {
       <LoginTab/>
       <Header />
 
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <h2>Milkotov Special!</h2>
-        <p>Freshly poured for you!</p>
-        <button onClick={closeModal}>Close</button>
-      </Modal>
+      {isModalOpen && (
+        <Modal isOpen={isModalOpen} onClose={closeModal}>
+          <EditDelivery deliveryId={selectedDeliveryId} onClose={closeModal} fetchDeliveries={fetchDeliveries}/>
+          <button onClick={closeModal}>Close</button>
+        </Modal>
+      )}
 
       <Routes>
         <Route path="/" element={<LandingPage/> } />
@@ -44,7 +70,7 @@ function AppContent() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/schedule-delivery" element={<SchedulePage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/dashboard" element={<DashboardPage openModal={openModal}/>} />
+        <Route path="/dashboard" element={<DashboardPage openModal={openModal} fetchDeliveries={fetchDeliveries}/>} />
 
       </Routes>
       {shouldShowFooter && <Footer />}

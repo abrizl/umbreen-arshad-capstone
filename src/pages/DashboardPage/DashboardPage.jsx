@@ -1,10 +1,11 @@
 import OverviewCard from '../../components/OverviewCard/OverviewCard';
 import './DashboardPage.scss';
 
-function DashboardPage({openModal}) {
+function DashboardPage({openModal, fetchDeliveries}) {
+    
     return(
         <>
-            <OverviewCard openModal={openModal}/>
+            <OverviewCard openModal={openModal} fetchDeliveries={fetchDeliveries}/>
         </>
     )
 }
