@@ -66,6 +66,10 @@ function LandingPage({openModal}) {
                 </div>
             </section>
 
+            <div className="inset">
+                
+            </div>
+
             <Link to='/schedule-delivery'>
                 <button className="landing__button">
                     Schedule your delivery!
