@@ -1,8 +1,13 @@
 import './Header.scss';
 import milkotovLogo from '../../assets/Milkotov-wordmark.svg';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 function Header() {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/schedule-delivery');
+      };
+
     return (
         <section className="headerContainer">
             <div className="header">
@@ -13,7 +18,7 @@ function Header() {
                     <Link to= "/" className="header__link">Home</Link>
                     <Link to= "/about" className="header__link">About</Link>
                     <Link to= "/contact" className="header__link">Contact</Link>
-                    <button className="header__button">Schedule a Delivery</button>
+                    <button onClick={handleClick} className="header__button">Schedule a Delivery</button>
                 </div>
             </div>
         </section>
