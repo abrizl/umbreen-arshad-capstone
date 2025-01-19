@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 
 
 function OverviewCard({openModal, deliveries, isLoading, error}) {
-    
+    const pendingDeliveries = deliveries.filter(delivery => delivery.status === 'Pending');
+
     return(
         <section className="overview">
             <div className="overview__card">
@@ -32,11 +33,11 @@ function OverviewCard({openModal, deliveries, isLoading, error}) {
                         <p>Loading deliveries...</p>
                     ) : error ? (
                         <p className="overview__error">{error}</p>
-                    ) : deliveries.length === 0 ? (
+                    ) : pendingDeliveries.length === 0 ? (
                         <p>No upcoming deliveries.</p>
                     ) : (
                         <ul className="overview__list">
-                            {deliveries.map((delivery) => (
+                            {pendingDeliveries.map((delivery) => (
                                 <li key={delivery.id} className="overview__item">
                                     <DeliveryItem key={delivery.id} delivery={delivery} openModal={openModal} />
                                 </li>
