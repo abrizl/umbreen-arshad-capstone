@@ -102,29 +102,46 @@
     &__topText {
         flex: 1;
         width: 100%;
-        font-size: 6rem;
-        line-height: 1;
+        @include largeHeadingMobile();
+
+        @include tablet {
+            @include largeHeadingTablet();
+        }
     }
 
     &__under {
         flex: 1;
-        font-size: 1.7rem;
         width: 100%;
         text-align: left;
+        @include headingMobile();
         line-height: 0;
+
+        @include tablet {
+            @include headingTablet();
+            line-height: 0.5;
+        }
+        
     }
 
     &__underRight {
         flex: 1;
-        font-size: 1.7rem;
         width: 100%;
         text-align: center;
-        line-height: 1;
+        @include headingMobile();
+
+        @include tablet {
+            @include headingTablet();
+        }
     }
 
     &__image {
-        width: 8rem;
+        width: 6rem;
         height: 10rem;
+
+        @include tablet {
+            width: 12rem;
+            height: 20rem;
+        }
     }
 
     &__details {
@@ -147,6 +164,10 @@
 
     &__description {
         @include bodyCopyMobile();
+
+        @include tablet {
+            @include smallBodyCopyTablet();
+        }
     }
 
     &__inset {
@@ -175,6 +196,10 @@
 
     &__caption {
         @include bodyCopyMobile();
+        
+        @include tablet {
+            @include smallBodyCopyTablet();
+        }
     }
 
 }

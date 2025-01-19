@@ -3,9 +3,14 @@
 
 //MOBILE
 
+@mixin largeHeadingMobile() {
+  font-size: 4rem;
+  line-height: 1;
+}
+
 @mixin headingMobile() {
   font-size: 1.125rem;
-  line-height: 1.4375rem;
+  line-height: 1;
 }
 
 @mixin bodyCopyMobile() {
@@ -25,6 +30,37 @@
   line-height: 0.9375rem;
   font-weight: Regular;
 }
+
+//TABLET
+
+@mixin largeHeadingTablet() {
+  font-size: 9rem;
+  line-height: 1;
+}
+
+@mixin headingTablet() {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+@mixin bodyCopyTablet() {
+  font-size: 1.5rem;
+  line-height: 0.9375rem;
+  font-weight: Regular;
+}
+
+@mixin smallBodyCopyTablet() {
+  font-size: 1rem;
+  line-height: 0.9375rem;
+  font-weight: Light;
+}
+
+@mixin labelTablet() {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  font-weight: Regular;
+}
+
 
 //Media Formatting ----------------------------------------- //
 
