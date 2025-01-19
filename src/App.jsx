@@ -39,11 +39,18 @@ function AppContent() {
   const [deliveries, setDeliveries] = useState([]);
   const fetchDeliveries = async () => {
     try {
-        const response = await axios.get('http://localhost:5000/api/deliveries');
-        const sortedDeliveries = response.data.sort((a, b) => new Date(a.scheduled_date) - new Date(b.scheduled_date));
-        setDeliveries(sortedDeliveries);
+      const token = localStorage.getItem('token'); 
+  
+      const response = await axios.get('http://localhost:5000/api/deliveries', {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+  
+      const sortedDeliveries = response.data.sort((a, b) => new Date(a.scheduled_date) - new Date(b.scheduled_date));
+      setDeliveries(sortedDeliveries);
     } catch (error) {
-        console.error('Error fetching deliveries:', error);
+      console.error('Error fetching deliveries:', error);
     }
   };
 
