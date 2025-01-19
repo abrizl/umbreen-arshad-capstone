@@ -27,8 +27,10 @@ function Footer() {
             
             <div className="footer__information">
                 <img src={bottle} alt= "glass milk bottle" className="footer__bottle"/>
-                <p className="footer__text">Premium whole milk.</p>
-                <p className="footer__text">Straight from the farm to your door.</p>
+                <div className="footer__textarea">
+                    <p className="footer__text">Premium whole milk.</p>
+                    <p className="footer__text">Straight from the farm to your door.</p>
+                </div>
             </div>
 
             <div className="footer__information">

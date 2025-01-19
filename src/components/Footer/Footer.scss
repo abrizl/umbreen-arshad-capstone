@@ -12,8 +12,17 @@
     align-items: center;
     gap: 2rem;
 
+    @include tablet {
+        padding: 2rem;
+        align-items: flex-start;
+    }
+
     &__logo {
         max-width: 10rem;
+
+        @include tablet {
+            max-width: 18rem;
+        }
     }
 
     &__bottle {
@@ -25,6 +34,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__textarea {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__icon{
