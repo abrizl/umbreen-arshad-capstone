@@ -82,7 +82,7 @@
         }
     }
 
-    &__icon{
+    &__iconStatic{
         width: 1.5rem;
         height: 1.5rem;
         fill: $Color-Mustard;
@@ -92,6 +92,23 @@
             height: 1.5rem;
         }
     }
+
+    &__icon{
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: $Color-Mustard;
+
+        &:hover {
+            fill: $Color-White;
+        }
+
+        @include tablet {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    
 
     &__box {
         padding-top: 0.5rem;

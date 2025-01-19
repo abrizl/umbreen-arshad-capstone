@@ -1,4 +1,5 @@
 import './Footer.scss';
+import { Link } from 'react-router-dom';
 import bottle from '../../assets/images/Milkotov-Bottle-01.svg';
 
 function Footer() {
@@ -37,46 +38,47 @@ function Footer() {
                 <div className="footer__information">
                     <div className="footer__container">
                         <div className="footer__content">
-                            <svg className='footer__icon' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+                            <svg className='footer__iconStatic' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
                             <p className="footer__detail">0303 726 9675</p>
                         </div>
                         <div className="footer__content">
-                            <svg className='footer__icon' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
-                            <p className="footer__detail">info@milkotov.com</p>
+                            <svg className='footer__iconStatic' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                            <a href="mailto:info@milkotov.com" className="footer__detail">
+                                <p className="footer__detail">info@milkotov.com</p></a>
                         </div>
                     </div>
 
                     <div className="footer__container">
                         <div className="footer__box">
-                            <svg className='footer__icon' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
-                            <defs>
-                            </defs>
-                            <path class="cls-1" d="M16.1,6.7h-1.5c-1.2,0-1.4.6-1.4,1.4v1.8h2.8l-.4,2.8h-2.4v7.3h-2.9v-7.3h-2.4v-2.8h2.4v-2.1c0-2.4,1.5-3.7,3.6-3.7s1.9,0,2.2.1v2.5h0Z"/>
-                            </svg>
-
-                            <svg className='footer__icon' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
-                                <defs>
-                                </defs>
-                                <path class="cls-1" d="M7.8,2h8.4c3.2,0,5.8,2.6,5.8,5.8v8.4c0,1.5-.6,3-1.7,4.1-1.1,1.1-2.6,1.7-4.1,1.7H7.8c-3.2,0-5.8-2.6-5.8-5.8V7.8c0-1.5.6-3,1.7-4.1,1.1-1.1,2.6-1.7,4.1-1.7ZM7.6,4c-1,0-1.9.4-2.5,1.1-.7.7-1.1,1.6-1.1,2.5v8.8c0,2,1.6,3.6,3.6,3.6h8.8c1,0,1.9-.4,2.5-1.1s1.1-1.6,1.1-2.5V7.6c0-2-1.6-3.6-3.6-3.6H7.6ZM17.2,5.5c.3,0,.6.1.9.4.2.2.4.6.4.9s-.1.6-.4.9c-.2.2-.6.4-.9.4s-.6-.1-.9-.4c-.2-.2-.4-.6-.4-.9s.1-.6.4-.9c.2-.2.6-.4.9-.4ZM12,7c1.3,0,2.6.5,3.5,1.5.9.9,1.5,2.2,1.5,3.5s-.5,2.6-1.5,3.5c-.9.9-2.2,1.5-3.5,1.5s-2.6-.5-3.5-1.5c-.9-.9-1.5-2.2-1.5-3.5s.5-2.6,1.5-3.5c.9-.9,2.2-1.5,3.5-1.5ZM12,9c-.8,0-1.6.3-2.1.9-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9s1.6-.3,2.1-.9.9-1.3.9-2.1-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9Z"/>
-                            </svg>
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><svg className='footer__icon' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+                                    <path class="cls-1" d="M16.1,6.7h-1.5c-1.2,0-1.4.6-1.4,1.4v1.8h2.8l-.4,2.8h-2.4v7.3h-2.9v-7.3h-2.4v-2.8h2.4v-2.1c0-2.4,1.5-3.7,3.6-3.7s1.9,0,2.2.1v2.5h0Z"/>
+                                </svg>
+                            </a>
+                            
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                <svg className='footer__icon' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+                                    <path class="cls-1" d="M7.8,2h8.4c3.2,0,5.8,2.6,5.8,5.8v8.4c0,1.5-.6,3-1.7,4.1-1.1,1.1-2.6,1.7-4.1,1.7H7.8c-3.2,0-5.8-2.6-5.8-5.8V7.8c0-1.5.6-3,1.7-4.1,1.1-1.1,2.6-1.7,4.1-1.7ZM7.6,4c-1,0-1.9.4-2.5,1.1-.7.7-1.1,1.6-1.1,2.5v8.8c0,2,1.6,3.6,3.6,3.6h8.8c1,0,1.9-.4,2.5-1.1s1.1-1.6,1.1-2.5V7.6c0-2-1.6-3.6-3.6-3.6H7.6ZM17.2,5.5c.3,0,.6.1.9.4.2.2.4.6.4.9s-.1.6-.4.9c-.2.2-.6.4-.9.4s-.6-.1-.9-.4c-.2-.2-.4-.6-.4-.9s.1-.6.4-.9c.2-.2.6-.4.9-.4ZM12,7c1.3,0,2.6.5,3.5,1.5.9.9,1.5,2.2,1.5,3.5s-.5,2.6-1.5,3.5c-.9.9-2.2,1.5-3.5,1.5s-2.6-.5-3.5-1.5c-.9-.9-1.5-2.2-1.5-3.5s.5-2.6,1.5-3.5c.9-.9,2.2-1.5,3.5-1.5ZM12,9c-.8,0-1.6.3-2.1.9-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9s1.6-.3,2.1-.9.9-1.3.9-2.1-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9Z"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="footer__right">
+                {/* only to appear in tablet view */}
                 <div className="footer__content">
                     <div className="footer__boxTwo">
-                        <svg className='footer__icon' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
-                        <defs>
-                        </defs>
-                        <path class="cls-1" d="M16.1,6.7h-1.5c-1.2,0-1.4.6-1.4,1.4v1.8h2.8l-.4,2.8h-2.4v7.3h-2.9v-7.3h-2.4v-2.8h2.4v-2.1c0-2.4,1.5-3.7,3.6-3.7s1.9,0,2.2.1v2.5h0Z"/>
-                        </svg>
-
-                        <svg className='footer__icon' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
-                            <defs>
-                            </defs>
-                            <path class="cls-1" d="M7.8,2h8.4c3.2,0,5.8,2.6,5.8,5.8v8.4c0,1.5-.6,3-1.7,4.1-1.1,1.1-2.6,1.7-4.1,1.7H7.8c-3.2,0-5.8-2.6-5.8-5.8V7.8c0-1.5.6-3,1.7-4.1,1.1-1.1,2.6-1.7,4.1-1.7ZM7.6,4c-1,0-1.9.4-2.5,1.1-.7.7-1.1,1.6-1.1,2.5v8.8c0,2,1.6,3.6,3.6,3.6h8.8c1,0,1.9-.4,2.5-1.1s1.1-1.6,1.1-2.5V7.6c0-2-1.6-3.6-3.6-3.6H7.6ZM17.2,5.5c.3,0,.6.1.9.4.2.2.4.6.4.9s-.1.6-.4.9c-.2.2-.6.4-.9.4s-.6-.1-.9-.4c-.2-.2-.4-.6-.4-.9s.1-.6.4-.9c.2-.2.6-.4.9-.4ZM12,7c1.3,0,2.6.5,3.5,1.5.9.9,1.5,2.2,1.5,3.5s-.5,2.6-1.5,3.5c-.9.9-2.2,1.5-3.5,1.5s-2.6-.5-3.5-1.5c-.9-.9-1.5-2.2-1.5-3.5s.5-2.6,1.5-3.5c.9-.9,2.2-1.5,3.5-1.5ZM12,9c-.8,0-1.6.3-2.1.9-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9s1.6-.3,2.1-.9.9-1.3.9-2.1-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9Z"/>
-                        </svg>
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                <svg className='footer__icon' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+                                    <path class="cls-1" d="M16.1,6.7h-1.5c-1.2,0-1.4.6-1.4,1.4v1.8h2.8l-.4,2.8h-2.4v7.3h-2.9v-7.3h-2.4v-2.8h2.4v-2.1c0-2.4,1.5-3.7,3.6-3.7s1.9,0,2.2.1v2.5h0Z"/>
+                                </svg>
+                            </a>
+                            
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                <svg className='footer__icon' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+                                    <path class="cls-1" d="M7.8,2h8.4c3.2,0,5.8,2.6,5.8,5.8v8.4c0,1.5-.6,3-1.7,4.1-1.1,1.1-2.6,1.7-4.1,1.7H7.8c-3.2,0-5.8-2.6-5.8-5.8V7.8c0-1.5.6-3,1.7-4.1,1.1-1.1,2.6-1.7,4.1-1.7ZM7.6,4c-1,0-1.9.4-2.5,1.1-.7.7-1.1,1.6-1.1,2.5v8.8c0,2,1.6,3.6,3.6,3.6h8.8c1,0,1.9-.4,2.5-1.1s1.1-1.6,1.1-2.5V7.6c0-2-1.6-3.6-3.6-3.6H7.6ZM17.2,5.5c.3,0,.6.1.9.4.2.2.4.6.4.9s-.1.6-.4.9c-.2.2-.6.4-.9.4s-.6-.1-.9-.4c-.2-.2-.4-.6-.4-.9s.1-.6.4-.9c.2-.2.6-.4.9-.4ZM12,7c1.3,0,2.6.5,3.5,1.5.9.9,1.5,2.2,1.5,3.5s-.5,2.6-1.5,3.5c-.9.9-2.2,1.5-3.5,1.5s-2.6-.5-3.5-1.5c-.9-.9-1.5-2.2-1.5-3.5s.5-2.6,1.5-3.5c.9-.9,2.2-1.5,3.5-1.5ZM12,9c-.8,0-1.6.3-2.1.9-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9s1.6-.3,2.1-.9.9-1.3.9-2.1-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9Z"/>
+                                </svg>
+                            </a>
                     </div>
                 </div>
                 <div className="footer__section">
