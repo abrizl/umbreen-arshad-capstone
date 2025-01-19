@@ -143,7 +143,7 @@
     }
 
     &__large {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         @include tablet {
             @include headingTablet();
             font-size: 2rem;
