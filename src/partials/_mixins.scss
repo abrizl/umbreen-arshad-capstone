@@ -56,7 +56,37 @@
 }
 
 @mixin labelTablet() {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 0.9375rem;
+  font-weight: Regular;
+}
+
+//DESKTOP
+
+@mixin largeHeadingDesktop() {
+  font-size: 9rem;
+  line-height: 1;
+}
+
+@mixin headingDesktop() {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+@mixin bodyCopyDesktop() {
+  font-size: 1.5rem;
+  line-height: 0.9375rem;
+  font-weight: Regular;
+}
+
+@mixin smallBodyCopyDesktop() {
+  font-size: 1rem;
+  line-height: 0.9375rem;
+  font-weight: Light;
+}
+
+@mixin labelDesktop() {
+  font-size: 1rem;
   line-height: 0.9375rem;
   font-weight: Regular;
 }

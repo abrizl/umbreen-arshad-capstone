@@ -15,6 +15,10 @@
     display: flex;
     flex-direction: column;
     background-color: $Color-White;
+
+    @include desktop {
+        flex-direction: row;
+    }
     
 
     &__navigation {
@@ -23,27 +27,77 @@
         justify-content: space-between;
         align-items: flex-start;
         padding: 1rem 1rem 0.5rem 1rem;
+
+                
+        @include desktop {
+            flex:1;
+            align-items: center;
+        }
     }
 
     &__link {
         flex: 1;
         display: flex;
         justify-content: center;
+
+        &:hover {
+            color: $Color-Mustard;
+        }
+
+        @include tablet {
+            @include labelTablet();
+        }
+
+        @include desktop {
+            justify-content: space-between;
+            align-items: center;
+            @include labelDesktop();
+
+        }
     }
 
     &__name {
         display: flex;
         align-items: center;
         justify-content: center;
+        
+        @include desktop {
+            flex:1;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding-left: 2rem;
+            padding-bottom: 1rem;
+        }
     }
 
     &__logo {
         padding-top: 1rem;
         max-width: 10rem;
         max-height: 10rem;
+
+        @include desktop {
+            max-width: 15rem;
+            max-height: 15rem;
+        }
     }
 
     &__button {
         display: none;
+
+        @include desktop {
+            display: inline-block;
+            padding: 0.5rem 3rem;
+            border: 1px solid $Color-Mustard;
+            background: $Color-Mustard;
+            border-radius: 3.125rem;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+
+            &:hover, &:active {
+                background: $Color-DarkGray;
+                border: 1px solid $Color-DarkGray;
+                color: $Color-Mustard;
+                cursor: pointer;
+            }
+        }
     }
 }
