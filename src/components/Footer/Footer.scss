@@ -39,6 +39,10 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 1rem;
+
+            @include desktop {
+                gap: 2rem;
+            }
         }
     }
 
