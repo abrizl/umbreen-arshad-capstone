@@ -2,7 +2,7 @@ import './DeliveryItem.scss';
 import milkotovBottle from "../../assets/images/milkotov-Bottle-01.svg";
 import { UNSAFE_getPatchRoutesOnNavigationFunction } from 'react-router-dom';
 
-function DeliveryItem({delivery, openModal, fetchDeliveries}) {
+function DeliveryItem({delivery, openModal}) {
     const formatDate = (dateString) => {
         const options = { month: 'short', day: '2-digit', year: 'numeric' };
         return new Date(dateString).toLocaleDateString('en-US', options).replace(',', '');

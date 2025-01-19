@@ -2,13 +2,28 @@ import OverviewCard from '../../components/OverviewCard/OverviewCard';
 import './DashboardPage.scss';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Modal from '../../components/Modal/Modal';
+import EditDelivery from '../../components/EditDelivery/EditDelivery';
 
-function DashboardPage({openModal}) {
+function DashboardPage({}) {
     const [deliveries, setDeliveries] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedDeliveryId, setSelectedDeliveryId] = useState(null);
+
+    const openModal = (id) => {
+        setSelectedDeliveryId(id); 
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedDeliveryId(null);
+    };
+
+   
         const fetchDeliveries = async () => {
             const token = localStorage.getItem('token');
 
@@ -33,12 +48,20 @@ function DashboardPage({openModal}) {
             }
         };
 
+    useEffect(() => {
         fetchDeliveries();
     }, []);
     
     return(
         <>
             <OverviewCard openModal={openModal} deliveries={deliveries} isLoading={isLoading} error={error}/>
+            {isModalOpen && (
+                <Modal isOpen={isModalOpen} onClose={closeModal}>
+                <EditDelivery deliveryId={selectedDeliveryId} onClose={closeModal} fetchDeliveries={fetchDeliveries}/>
+                <button onClick={closeModal}>Close</button>
+                </Modal>
+            )}
+        
         </>
     )
 }
