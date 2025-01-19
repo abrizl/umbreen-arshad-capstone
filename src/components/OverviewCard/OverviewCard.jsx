@@ -3,39 +3,8 @@ import './OverviewCard.scss';
 import { useState, useEffect } from 'react';
 
 
-function OverviewCard({openModal, fetchDeliveries}) {
-    const [deliveries, setDeliveries] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchDeliveries = async () => {
-            const token = localStorage.getItem('token');
-
-            try {
-                const response = await fetch('http://localhost:5000/api/dashboard/my-deliveries', {
-                    headers: {
-                        'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json'
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch deliveries');
-                }
-
-                const data = await response.json();
-                setDeliveries(data);
-            } catch (err) {
-                setError(err.message);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-
-        fetchDeliveries();
-    }, []);
-
+function OverviewCard({openModal, deliveries, isLoading, error}) {
+    
     return(
         <section className="overview">
             <div className="overview__card">
@@ -69,7 +38,7 @@ function OverviewCard({openModal, fetchDeliveries}) {
                         <ul className="overview__list">
                             {deliveries.map((delivery) => (
                                 <li key={delivery.id} className="overview__item">
-                                    <DeliveryItem key={delivery.id} delivery={delivery} openModal={openModal} fetchDeliveries={fetchDeliveries} />
+                                    <DeliveryItem key={delivery.id} delivery={delivery} openModal={openModal} />
                                 </li>
                             ))}
                         </ul>

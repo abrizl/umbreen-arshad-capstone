@@ -36,30 +36,6 @@ function AppContent() {
       setSelectedDeliveryId(null);
   };
 
-  const [deliveries, setDeliveries] = useState([]);
-  
-  const fetchDeliveries = async () => {
-    try {
-      const token = localStorage.getItem('token'); 
-  
-      const response = await axios.get('http://localhost:5000/api/deliveries', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      });
-  
-      const sortedDeliveries = response.data.sort((a, b) => new Date(a.scheduled_date) - new Date(b.scheduled_date));
-      setDeliveries(sortedDeliveries);
-      
-    } catch (error) {
-      console.error('Error fetching deliveries:', error);
-    }
-  };
-
-  useEffect(() => {
-      fetchDeliveries();
-  }, []);
-
   return (
     <>
     <ScrollToTop/>
@@ -68,7 +44,7 @@ function AppContent() {
 
       {isModalOpen && (
         <Modal isOpen={isModalOpen} onClose={closeModal}>
-          <EditDelivery deliveryId={selectedDeliveryId} onClose={closeModal} fetchDeliveries={fetchDeliveries}/>
+          <EditDelivery deliveryId={selectedDeliveryId} onClose={closeModal}/>
           <button onClick={closeModal}>Close</button>
         </Modal>
       )}
@@ -79,7 +55,7 @@ function AppContent() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/schedule-delivery" element={<SchedulePage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/dashboard" element={<DashboardPage openModal={openModal} fetchDeliveries={fetchDeliveries}/>} />
+        <Route path="/dashboard" element={<DashboardPage openModal={openModal}/>} />
 
       </Routes>
       {shouldShowFooter && <Footer />}
