@@ -37,6 +37,7 @@ function AppContent() {
   };
 
   const [deliveries, setDeliveries] = useState([]);
+  
   const fetchDeliveries = async () => {
     try {
       const token = localStorage.getItem('token'); 
@@ -49,6 +50,7 @@ function AppContent() {
   
       const sortedDeliveries = response.data.sort((a, b) => new Date(a.scheduled_date) - new Date(b.scheduled_date));
       setDeliveries(sortedDeliveries);
+      
     } catch (error) {
       console.error('Error fetching deliveries:', error);
     }

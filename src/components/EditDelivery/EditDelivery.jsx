@@ -102,6 +102,7 @@ function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
         try {
             await axios.put(`http://localhost:5000/api/deliveries/${deliveryId}`, updatedDelivery);
             alert('Delivery updated successfully!');
+            fetchDeliveries();
             onClose();
         } catch (err) {
             console.error('Error updating delivery:', err);
@@ -115,6 +116,7 @@ function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
         try {
             await axios.delete(`http://localhost:5000/api/deliveries/${deliveryId}`);
             alert('Delivery canceled successfully.');
+            fetchDeliveries();
             onClose();
         } catch (err) {
             console.error('Error canceling delivery', err);
