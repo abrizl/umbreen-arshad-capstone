@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 function OverviewCard({openModal, deliveries, isLoading, error}) {
     const pendingDeliveries = deliveries.filter(delivery => delivery.status === 'Pending');
 
+    const deliveredCount = deliveries.filter(delivery => delivery.status === 'Delivered').length;
+
     return(
         <section className="overview">
             <div className="overview__card">
@@ -50,11 +52,15 @@ function OverviewCard({openModal, deliveries, isLoading, error}) {
             <div className="overview__metrics">
                 <div className="overview__total">
                     <h4 className="overview__subheading">total deliveries</h4>
-
+                    <p className="overview__metric">{deliveredCount}</p>
                 </div>
                 <div className="overview__total">
                     <h4 className="overview__subheading">litres of milk delivered</h4>
-                    
+                    <p className="overview__metric">
+                        {deliveries
+                            .filter(delivery => delivery.status === 'Delivered')
+                            .reduce((sum, delivery) => sum + delivery.quantity, 0)} L
+                    </p>
                 </div>
             </div>
         </section>
