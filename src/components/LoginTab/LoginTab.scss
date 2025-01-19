@@ -6,13 +6,8 @@
     padding: 0.75rem 1.5rem 0.75rem 0.75rem;
     gap: 0.5rem;
     background-color: $Color-Mustard;
-
-    &:hover {
-        fill: $Color-White;
-        color: $Color-White;
-        cursor: pointer;
-        text-decoration: underline;
-    }
+    display: flex;
+    justify-content: flex-end;
 
     &__items{
         display: flex;
@@ -20,6 +15,7 @@
         align-items: center;
         justify-content: flex-end;
         gap: 0.5rem;
+        width: fit-content;
         
         font-size: 0.75rem;
         color: $Color-DarkGray;
@@ -38,14 +34,17 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
-
-    &__icon {
+        justify-content: flex-end;
+        gap: 0.35rem;
 
         &:hover {
             fill: $Color-White;
+            color: $Color-White;
+            cursor: pointer;
+            text-decoration: underline;
         }
     }
+
 }
 
 .dropdown {
