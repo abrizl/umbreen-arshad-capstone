@@ -153,6 +153,7 @@ function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
                         isClearable={true}
                         minDate={new Date()}
                         dateFormat="yyyy-MM-dd"
+                        wrapperClassName="edit__datepicker-wrapper"
                         className="edit__input"
                     />
                 </div>
