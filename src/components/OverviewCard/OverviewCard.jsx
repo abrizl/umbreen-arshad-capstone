@@ -48,9 +48,9 @@ function OverviewCard({openModal, deliveries, isLoading, error, userInfo, userEr
                     </div>
                     <div className="_overview__information">
                         <p className="overview__metric">
-                            220 Rs.
+                            220 Rs./L
                         </p>
-                        <p className="overview__subheading">current rate of milk/L</p>
+                        <p className="overview__subheading">current rate of milk</p>
                     </div>
                 </div>
 
