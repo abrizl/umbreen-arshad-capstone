@@ -4,14 +4,23 @@
 
 .window {
     margin: 1rem;
-    border: 1px solid $Color-LightGray;
+    
 
     &__container {
         padding: 1rem;
 
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 2rem;
+
+        @include tablet {
+            padding: 4rem 10rem;
+        }
+
+        @include desktop {
+            padding: 4rem 15rem;
+        }
     }
 
     &__header {
@@ -31,6 +40,7 @@
         @include tablet {
             flex-direction: column;
             flex:1;
+            max-width: 70%;
         }
     }
 
@@ -70,14 +80,15 @@
         border-radius: 3.125rem;
         background-color: $Color-LightMustard ;
         padding: 0.5rem 1rem;
-
-        font-family: 'poppins';
-        font-size: 1.3rem;
-
+        height: 3rem;
         width: 100%;
 
         &:active, &:focus {
             border: 1px solid $Color-Mustard;
+        }
+
+        @include tablet {
+            @include smallBodyCopyTablet();
         }
     }
 
