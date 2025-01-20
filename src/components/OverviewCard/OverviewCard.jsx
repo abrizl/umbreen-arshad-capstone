@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 import milkbottleWhite from '../../assets/images/Milkotov-Bottle-White.svg';
 
 
-function OverviewCard({openModal, deliveries, isLoading, error}) {
+function OverviewCard({openModal, deliveries, isLoading, error, userInfo, userError}) {
     const pendingDeliveries = deliveries.filter(delivery => delivery.status === 'Pending');
 
     const deliveredCount = deliveries.filter(delivery => delivery.status === 'Delivered').length;
+
+    console.log(userInfo);
 
     return(
         <section className="overview">
@@ -87,22 +89,17 @@ function OverviewCard({openModal, deliveries, isLoading, error}) {
                 <h3 className="overview__heading">Account information</h3>
                 <div className="overview__details">
                     <h4 className="overview__subheading">Name:</h4>
-                    <p className="overview__data">{deliveredCount}</p>
+                    <p className="overview__data">{userInfo.name}</p>
                 </div>
 
                 <div className="overview__details">
                     <h4 className="overview__subheading">Email:</h4>
-                    <p className="overview__data">{deliveredCount}</p>
+                    <p className="overview__data">{userInfo.email}</p>
                 </div>
 
                 <div className="overview__details">
                     <h4 className="overview__subheading">Phone Number:</h4>
-                    <p className="overview__data">{deliveredCount}</p>
-                </div>
-
-                <div className="overview__details">
-                    <h4 className="overview__subheading">Address:</h4>
-                    <p className="overview__data">{deliveredCount}</p>
+                    <p className="overview__data">{userInfo.phone_number}</p>
                 </div>
             </div>
         </section>

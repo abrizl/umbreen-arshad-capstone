@@ -10,6 +10,9 @@ function DashboardPage({}) {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const [userInfo, setUserInfo] = useState(null);
+    const [userError, setUserError] = useState(null);
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedDeliveryId, setSelectedDeliveryId] = useState(null);
 
@@ -48,13 +51,36 @@ function DashboardPage({}) {
             }
         };
 
+        const fetchUserInfo = async () => {
+            const token = localStorage.getItem('token');
+    
+            try {
+                const response = await fetch('http://localhost:5000/api/dashboard/user-info', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+    
+                if (!response.ok) {
+                    throw new Error('Failed to fetch user information');
+                }
+    
+                const data = await response.json();
+                setUserInfo(data);
+            } catch (err) {
+                setUserError(err.message);
+            }
+        };
+
     useEffect(() => {
         fetchDeliveries();
+        fetchUserInfo();
     }, []);
     
     return(
         <>
-            <OverviewCard openModal={openModal} deliveries={deliveries} isLoading={isLoading} error={error}/>
+            <OverviewCard openModal={openModal} deliveries={deliveries} isLoading={isLoading} error={error} userInfo={userInfo} userError={userError}/>
             {isModalOpen && (
                 <Modal isOpen={isModalOpen} onClose={closeModal}>
                 <EditDelivery deliveryId={selectedDeliveryId} onClose={closeModal} fetchDeliveries={fetchDeliveries}/>
