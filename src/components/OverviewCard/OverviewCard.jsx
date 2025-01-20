@@ -29,6 +29,7 @@ function OverviewCard({openModal, deliveries, isLoading, error, userInfo, userEr
                         <p className="overview__subheading">completed deliveries</p>
                     </div>
                 </div>
+                
                 <div className="overview__metrics">
 
                     <div className="overview__iconContainer">
@@ -43,6 +44,20 @@ function OverviewCard({openModal, deliveries, isLoading, error, userInfo, userEr
                         <p className="overview__subheading">litres of milk delivered</p>
                     </div>
                 </div>
+
+                <div className="overview__metrics">
+
+                    <div className="overview__iconContainer">
+                        <img src={milkbottleWhite} alt="milkotov bottle" className='overview__bottleIcon'/>
+                    </div>
+                    <div className="_overview__information">
+                        <p className="overview__metric">
+                            220 Rs.
+                        </p>
+                        <p className="overview__subheading">current rate of milk/L</p>
+                    </div>
+                </div>
+
             </div>
 
 
