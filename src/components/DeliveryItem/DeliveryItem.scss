@@ -11,22 +11,35 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 0.5rem;
-        margin: 0 2rem;
+        margin: 0 1.3rem 0 2rem;
         padding-left: 1rem;
 
         border-radius: 3.125rem;
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
-        height: 2.5rem
+        height: 2.5rem;
+
+        font-size: 0.75rem;
+
+        @include tablet {
+            font-size: 0.75rem;
+        }
+
+        @include desktop {
+            font-size: 1rem;
+        }
     }
 
     &__area {
         @include bodyCopyMobile();
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
         gap: 0.5rem;
+
+        @include desktop {
+            font-size: 1rem;
+        }
     }
 
     &__section {
@@ -38,11 +51,18 @@
     &__bottle {
         max-width: 2rem;
         max-height: 3rem;
+
+        @include desktop {
+            max-width: 3rem;
+            max-height: 4rem;
+        }
     }
 
     &__box {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: center
     }
 
     &__editbutton {
@@ -61,5 +81,20 @@
             cursor: pointer;
         }
 
+        @include desktop {
+            font-size: 1rem;
+            padding: 0.75rem 1rem;
+            width: 6rem;
+
+        }
+
+    }
+
+    &__labelempty{
+        color: $Color-White;
+    }
+
+    &__address{
+        color: $Color-LightGray;
     }
 }
