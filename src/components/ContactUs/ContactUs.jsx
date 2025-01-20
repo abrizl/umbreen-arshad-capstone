@@ -23,17 +23,35 @@ function ContactUs() {
     };
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            message: ''
-        });
-
-        // Add logic to send data to a backend API
+    
+        try {
+            const response = await fetch('http://localhost:5000/api/contact-us', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+    
+            if (!response.ok) {
+                throw new Error('Failed to send your message. Please try again.');
+            }
+    
+            const data = await response.json();
+            alert(data.message);
+    
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                message: ''
+            });
+        } catch (error) {
+            console.error('Error submitting contact form:', error);
+            alert('An error occurred. Please try again later.');
+        }
     };
 
     return (
