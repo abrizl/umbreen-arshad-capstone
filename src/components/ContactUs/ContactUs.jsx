@@ -43,6 +43,38 @@ function ContactUs() {
             <div className="contact__main">
                 <div className="contact__left">
                     <h2 className="contact__title">Get in touch</h2>
+                
+                    <div className="contact__informationTablet">
+                        <div className="contact__subtitle">
+                            <p className="contact__heading">for immediate order support</p>
+                            <p className="contact__text">call us at 0303 726 9675</p>
+                        </div>
+
+                        <div className="contact__bundle">
+
+                            <div className="contact__subtitle">
+                                <p className="contact__heading">Address</p>
+                                <p className="contact__text">Unit 76F, Adyala Rd </p>
+                                <p className="contact__text">Ghauri Town, Rawalpindi</p>
+                            </div>
+
+                            <div className="contact__subtitle">
+                                <p className="contact__heading">Hours</p>
+                                <p className="contact__text">Mon - Fri ... 9am - 9pm </p>
+                                <p className="contact__text">Sat - Sun ... 10am - 5pm </p>
+                            </div>
+
+                        </div>
+
+                        <div className="contact__icons">
+                            <div className="contact__circle">
+                                <img src={facebookIcon} alt="facebook icon" className='contact__icon'/>
+                            </div>
+                            <div className="contact__circle">
+                                <img src={instagramIcon} alt="facebook icon" className='contact__icon'/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <form className="contact__formArea" onSubmit={handleSubmit}>
