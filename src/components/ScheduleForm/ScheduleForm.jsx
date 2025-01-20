@@ -258,14 +258,6 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
                     <div className="form__quantity">
                         <label htmlFor="quantity" className="contact__label">Quantity (Litres)</label>
                         <div className="form__quantity-controls">
-                            <button 
-                                type="button" 
-                                className='form__control'
-                                onClick={() => setFormData(prevData => ({
-                                    ...prevData,
-                                    quantity: Math.max(1, prevData.quantity - 1)
-                                }))}
-                            >-</button>
 
                             <input
                                 type="number"
@@ -277,15 +269,6 @@ function ScheduleForm({ cities, areas, selectedCity, setSelectedCity }) {
                                 onChange={handleQuantityChange}
                                 required
                             />
-
-                            <button 
-                                type="button" 
-                                className='form__control'
-                                onClick={() => setFormData(prevData => ({
-                                    ...prevData,
-                                    quantity: prevData.quantity + 1
-                                }))}
-                            >+</button>
                         </div>
                     </div>
                 </div>    
