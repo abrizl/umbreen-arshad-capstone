@@ -37,6 +37,10 @@
         left: 5%;
         font-size: 1.8rem;
 
+        @include tablet {
+            font-size: 4rem;
+        }
+
         @include desktop {
             font-size: 8rem;
         }
@@ -49,6 +53,12 @@
         top: 13%;
         left: 15%;
         font-size: 1.8rem;
+
+        @include tablet {
+            font-size: 4rem;
+            top: 15%;
+            left: 15%;
+        }
 
         @include desktop {
             font-size: 8rem;
