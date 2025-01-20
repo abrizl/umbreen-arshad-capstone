@@ -5,13 +5,11 @@
 .overview {
     margin: 1rem;
 
-    &__card {
-        margin: 1rem;
-        padding: 2rem;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 
-            0 1px 2px rgba(0, 0, 0, 0.24);
-        
-
+    &__top {
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+        }
     }
 
     &__metrics {
@@ -26,13 +24,6 @@
         gap: 1rem;
     }
 
-    &__icon {
-        fill: $Color-White;
-        max-width: 5rem;
-        max-height: 5rem;
-
-    }
-
     &__iconContainer {
         background-color: $Color-Mustard;
         border-radius: 50%;
@@ -44,8 +35,59 @@
         justify-content: center;
         padding: 0.5rem;
     }
+    
+    &__icon {
+        fill: $Color-White;
+        max-width: 5rem;
+        max-height: 5rem;
+
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__card {
+        margin: 1rem;
+        padding: 2rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 
+            0 1px 2px rgba(0, 0, 0, 0.24);
+        
+
+    }
 
     &__metric {
-        font-size: 4rem;
+        font-size: 3rem;
+        line-height: 1;
     }
+
+    &__subheading {
+        font-weight: light;
+    }
+
+    &__bottleIcon {
+        width:2rem;
+        height: 3rem;
+    }
+
+    &__heading {
+        padding-bottom: 1rem;
+    }
+
+    &__details{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    &__account {
+        margin: 1rem;
+        padding: 2rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 
+            0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
 }

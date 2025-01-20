@@ -1,6 +1,7 @@
 import DeliveryItem from '../DeliveryItem/DeliveryItem';
 import './OverviewCard.scss';
 import { useState, useEffect } from 'react';
+import milkbottleWhite from '../../assets/images/Milkotov-Bottle-White.svg';
 
 
 function OverviewCard({openModal, deliveries, isLoading, error}) {
@@ -23,16 +24,22 @@ function OverviewCard({openModal, deliveries, isLoading, error}) {
                     </div>
                     <div className="_overview__information">
                         <p className="overview__metric">{deliveredCount}</p>
-                        <h4 className="overview__subheading">completed deliveries</h4>
+                        <p className="overview__subheading">completed deliveries</p>
                     </div>
                 </div>
                 <div className="overview__metrics">
-                    <h4 className="overview__subheading">litres of milk delivered</h4>
-                    <p className="overview__metric">
-                        {deliveries
-                            .filter(delivery => delivery.status === 'Delivered')
-                            .reduce((sum, delivery) => sum + delivery.quantity, 0)} L
-                    </p>
+
+                    <div className="overview__iconContainer">
+                        <img src={milkbottleWhite} alt="milkotov bottle" className='overview__bottleIcon'/>
+                    </div>
+                    <div className="_overview__information">
+                        <p className="overview__metric">
+                            {deliveries
+                                .filter(delivery => delivery.status === 'Delivered')
+                                .reduce((sum, delivery) => sum + delivery.quantity, 0)}
+                        </p>
+                        <p className="overview__subheading">litres of milk delivered</p>
+                    </div>
                 </div>
             </div>
 
@@ -76,18 +83,26 @@ function OverviewCard({openModal, deliveries, isLoading, error}) {
                 </div>
             </div>
 
-            <div className="overview__metrics">
-                <div className="overview__total">
-                    <h4 className="overview__subheading">total deliveries</h4>
-                    <p className="overview__metric">{deliveredCount}</p>
+            <div className="overview__account">
+                <h3 className="overview__heading">Account information</h3>
+                <div className="overview__details">
+                    <h4 className="overview__subheading">Name:</h4>
+                    <p className="overview__data">{deliveredCount}</p>
                 </div>
-                <div className="overview__total">
-                    <h4 className="overview__subheading">litres of milk delivered</h4>
-                    <p className="overview__metric">
-                        {deliveries
-                            .filter(delivery => delivery.status === 'Delivered')
-                            .reduce((sum, delivery) => sum + delivery.quantity, 0)} L
-                    </p>
+
+                <div className="overview__details">
+                    <h4 className="overview__subheading">Email:</h4>
+                    <p className="overview__data">{deliveredCount}</p>
+                </div>
+
+                <div className="overview__details">
+                    <h4 className="overview__subheading">Phone Number:</h4>
+                    <p className="overview__data">{deliveredCount}</p>
+                </div>
+
+                <div className="overview__details">
+                    <h4 className="overview__subheading">Address:</h4>
+                    <p className="overview__data">{deliveredCount}</p>
                 </div>
             </div>
         </section>
