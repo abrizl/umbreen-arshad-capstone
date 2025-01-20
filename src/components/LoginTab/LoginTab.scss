@@ -74,7 +74,7 @@
     cursor: pointer;
     text-align: left;
     width: 100%;
-    color: #333;
+    color: $Color-Black;
     text-decoration: none;
     border: none;
 
@@ -83,6 +83,7 @@
 
         &:hover {
             background-color: $Color-LightMustard;
+            color: $Color-Mustard;
         }
 
         button {
