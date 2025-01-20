@@ -24,6 +24,7 @@
         flex-direction: row;
         align-items: center;
         gap: 1rem;
+        flex:1;
     }
 
     &__iconContainer {
@@ -62,12 +63,23 @@
     }
 
     &__metric {
-        font-size: 3rem;
+        font-size: 1rem;
         line-height: 1;
+
+        @include tablet {
+            font-size: 3rem;
+            line-height: 1;
+        }
     }
 
     &__subheading {
         font-weight: light;
+        font-size: 0.75rem;
+        
+        @include tablet {
+            font-size: 3rem;
+            line-height: 1;
+        }
     }
 
     &__bottleIcon {
