@@ -199,7 +199,7 @@ function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
 
                 {/* Submit Button */}
                 <button type="submit" className="edit__button">Update Delivery</button>
-                <button type="button" onClick={onClose} className="edit__button edit__button--cancel">Cancel</button>
+                <button type="button" onClick={onClose} className="edit__button edit__button--cancel">Close</button>
   
                 {/* Cancel Delivery Button */}
                     {canCancel && (

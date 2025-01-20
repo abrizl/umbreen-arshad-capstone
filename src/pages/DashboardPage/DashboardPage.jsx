@@ -86,7 +86,6 @@ function DashboardPage({}) {
             {isModalOpen && (
                 <Modal isOpen={isModalOpen} onClose={closeModal}>
                 <EditDelivery deliveryId={selectedDeliveryId} onClose={closeModal} fetchDeliveries={fetchDeliveries}/>
-                <button onClick={closeModal}>Close</button>
                 </Modal>
             )}
         

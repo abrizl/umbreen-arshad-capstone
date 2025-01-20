@@ -71,6 +71,11 @@
             color: $Color-Mustard;
             cursor: pointer;
         }
+
+        &--delete {
+            background-color: red;
+            color: $Color-White;
+        }
     }
 }
 

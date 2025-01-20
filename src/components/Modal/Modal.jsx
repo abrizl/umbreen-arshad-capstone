@@ -1,4 +1,5 @@
 import React from "react";
+import closeButton from '../../assets/icons/close.svg';
 
 const Modal = ({ isOpen, onClose, children }) => {
     if (!isOpen) {
@@ -7,7 +8,9 @@ const Modal = ({ isOpen, onClose, children }) => {
   return (
     <div style={overlayStyle}>
       <div style={modalStyle}>
-        <button onClick={onClose} style={closeButtonStyle}>X</button>
+        <button onClick={onClose} style={closeButtonStyle}>
+          <img src={closeButton} alt="Close button"/>  
+        </button>
         {children}
       </div>
     </div>
