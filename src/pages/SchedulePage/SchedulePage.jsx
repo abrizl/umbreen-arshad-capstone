@@ -44,7 +44,7 @@ function SchedulePage() {
 
     return(
         <>
-            <h2 className="schedule__heading">Schedule your delivery now</h2>
+            <h2 className="schedule__heading">Schedule your delivery below</h2>
             <ScheduleForm cities={cities} areas={areas} selectedCity={selectedCity} setSelectedCity={setSelectedCity}/>
         </>
     )

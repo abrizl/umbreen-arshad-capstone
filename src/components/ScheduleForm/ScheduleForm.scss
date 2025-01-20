@@ -6,6 +6,10 @@
     padding: 1rem 2rem;
     @include bodyCopyMobile();
 
+    @include desktop {
+        margin: 3rem 30rem;
+    }
+
     &__area {
         display: flex;
         flex-direction: column;
@@ -62,5 +66,10 @@
             color: $Color-Mustard;
             cursor: pointer;
         }
+    }
+
+    &__date-picker{
+        display: flex;
+        flex-direction: column;
     }
 }
