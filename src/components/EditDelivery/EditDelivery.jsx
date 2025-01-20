@@ -159,30 +159,32 @@ function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
                 </div>
 
                 {/* Delivery Time */}
-                <div className="edit__checkbox">
+                <div className="edit__item">
                     <p className="edit__label">Delivery Time:</p>
-                    <label>
-                        <input
-                            type="checkbox"
-                            value="Morning"
-                            checked={formData.deliveryTime.includes('Morning')}
-                            onChange={handleCheckboxChange}
-                        />
-                        Morning (8am - 10am)
-                    </label>
-                    <label>
-                        <input
-                            type="checkbox"
-                            value="Evening"
-                            checked={formData.deliveryTime.includes('Evening')}
-                            onChange={handleCheckboxChange}
-                        />
-                        Evening (6pm - 8pm)
-                    </label>
+                    <div className="edit__checkboxes">
+                        <label className='edit__checkarea'>
+                            <input
+                                type="checkbox"
+                                value="Morning"
+                                checked={formData.deliveryTime.includes('Morning')}
+                                onChange={handleCheckboxChange}
+                            />
+                            Morning (8am - 10am)
+                        </label>
+                        <label className='edit__checkarea'>
+                            <input
+                                type="checkbox"
+                                value="Evening"
+                                checked={formData.deliveryTime.includes('Evening')}
+                                onChange={handleCheckboxChange}
+                            />
+                            Evening (6pm - 8pm)
+                        </label>
+                    </div>
                 </div>
 
                 {/* Quantity */}
-                <div className="edit__quantity">
+                <div className="edit__item">
                     <label htmlFor="quantity" className="edit__label">Quantity (Litres):</label>
                     <input
                         type="number"
