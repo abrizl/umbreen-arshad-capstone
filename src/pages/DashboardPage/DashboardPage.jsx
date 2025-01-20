@@ -53,7 +53,9 @@ function DashboardPage({}) {
 
         const fetchUserInfo = async () => {
             const token = localStorage.getItem('token');
-    
+            console.log(localStorage.getItem('token'));
+            if (!token) return;
+
             try {
                 const response = await fetch('http://localhost:5000/api/dashboard/user-info', {
                     headers: {
