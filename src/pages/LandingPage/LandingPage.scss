@@ -36,6 +36,10 @@
         top: 8%;
         left: 5%;
         font-size: 1.8rem;
+
+        @include desktop {
+            font-size: 8rem;
+        }
         
     }
 
@@ -45,6 +49,12 @@
         top: 13%;
         left: 15%;
         font-size: 1.8rem;
+
+        @include desktop {
+            font-size: 8rem;
+            top: 17%;
+            left: 15%;
+        }
     }
 
     &__button {
@@ -107,6 +117,10 @@
         @include tablet {
             @include largeHeadingTablet();
         }
+
+        @include desktop {
+            font-size: 20rem;
+        }
     }
 
     &__under {
@@ -120,6 +134,10 @@
             @include headingTablet();
             line-height: 0.5;
         }
+
+        @include desktop {
+            font-size: 5.5rem;
+        }
         
     }
 
@@ -132,6 +150,10 @@
         @include tablet {
             @include headingTablet();
         }
+
+        @include desktop {
+            font-size: 4rem;
+        }
     }
 
     &__image {
@@ -141,6 +163,11 @@
         @include tablet {
             width: 12rem;
             height: 20rem;
+        }
+
+        @include desktop {
+            width: 24rem;
+            height: 40rem;
         }
     }
 
@@ -153,6 +180,11 @@
     &__icon {
         width: 5rem;
         height: 5rem;
+
+        @include desktop {
+            width: 8rem;
+            height: 8rem;
+        }
     }
 
     &__box {
@@ -168,6 +200,11 @@
         @include tablet {
             @include smallBodyCopyTablet();
         }
+
+        @include desktop {
+            font-size: 1rem;
+            padding-top: 1rem;
+        }
     }
 
     &__inset {
@@ -181,6 +218,10 @@
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
+
+        @include desktop {
+            height: 40rem;
+        }
     }
 
     &__category {
@@ -192,6 +233,11 @@
     &__icons {
         max-width: 3rem;
         max-height: 3rem;
+
+        @include desktop {
+            max-width: 8rem;
+            max-height: 8rem;
+        }
     }
 
     &__caption {

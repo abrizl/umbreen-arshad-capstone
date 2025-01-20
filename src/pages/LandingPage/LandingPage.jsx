@@ -64,7 +64,7 @@ function LandingPage({openModal}) {
                 </div>
 
                 <div className="why__inset">
-                    <h3 className="why__description">How it works</h3>
+                    <h2 className="why__description">How it works</h2>
                     <div className="why__category">
                         <img src={scheduleIcon} alt="schedule" className='why__icons'/>
                         <p className="why__caption">customize your delivery schedule online</p>
