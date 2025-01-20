@@ -62,16 +62,16 @@ function OverviewCard({openModal, deliveries, isLoading, error, userInfo, userEr
                     <h3 className="overview__heading">Upcoming deliveries</h3>
                     <div className="deliveryinfo__heading">
                         <div className="deliveryinfo__part">
-                            <p className="deliveryinfo__label">Date & Address</p>
+                            <p className="deliveryinfo__labelTablet">Date & Address</p>
                         </div>
                         <div className="deliveryinfo__part">
-                            <p className="deliveryinfo__label">Delivery Time</p>
+                            <p className="deliveryinfo__labelTablet">Delivery Time</p>
                         </div>
                         <div className="deliveryinfo__part">
-                            <p className="deliveryinfo__label">Quantity</p>
+                            <p className="deliveryinfo__labelTablet">Quantity</p>
                         </div>
                         <div className="deliveryinfo__part">
-                            <p className="deliveryinfo__label">Status</p>
+                            <p className="deliveryinfo__labelTablet">Status</p>
                         </div>
                         <div className="deliveryinfo__part">
                             <p className="deliveryinfo__labelempty">Emptytohelpspa</p>
