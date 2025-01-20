@@ -7,7 +7,7 @@
     @include bodyCopyMobile();
 
     @include desktop {
-        margin: 3rem 30rem;
+        margin: 2rem 30rem;
     }
 
     &__area {
@@ -72,4 +72,10 @@
         display: flex;
         flex-direction: column;
     }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
