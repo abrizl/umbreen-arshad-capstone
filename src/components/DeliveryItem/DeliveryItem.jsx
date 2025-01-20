@@ -25,16 +25,25 @@ function DeliveryItem({delivery, openModal}) {
                     </div>
                 </div>
 
-                <div className="deliveryinfo__slot">
-                    {delivery.delivery_slot}
+                <div className="deliveryinfo__mobile">
+                    <span className='deliveryinfo__label  '>Delivery Time</span>              
+                    <div className="deliveryinfo__slot">
+                        {delivery.delivery_slot}
+                    </div>
                 </div>
 
-                <div className="deliveryinfo__quantity">
-                    {delivery.quantity}L
+                <div className="deliveryinfo__mobile">
+                    <span className='deliveryinfo__label  '>Quantity</span>
+                    <div className="deliveryinfo__quantity">
+                        {delivery.quantity}L
+                    </div>
                 </div>
 
-                <div className="deliveryinfo__status">
-                    {delivery.status}
+                <div className="deliveryinfo__mobile">
+                    <span className='deliveryinfo__label  '>Status</span>
+                    <div className="deliveryinfo__status">
+                        {delivery.status}
+                    </div>
                 </div>
 
                 <div className="deliveryinfo__status">
