@@ -22,7 +22,6 @@ function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
             try {
                 const response = await axios.get(`http://localhost:5000/api/deliveries/${deliveryId}`);
                 const data = response.data;
-                console.log(response.data);
 
                 setDeliveryData(data);
                 setFormData({

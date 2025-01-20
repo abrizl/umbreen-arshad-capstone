@@ -10,7 +10,6 @@ function OverviewCard({openModal, deliveries, isLoading, error, userInfo, userEr
 
     const deliveredCount = deliveries.filter(delivery => delivery.status === 'Delivered').length;
 
-    console.log(userInfo);
 
     return(
         <section className="overview">
