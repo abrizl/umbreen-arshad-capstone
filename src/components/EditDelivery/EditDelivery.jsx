@@ -5,6 +5,7 @@ import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
 
 function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
+    console.log("passed data", deliveryId)
     const [deliveryData, setDeliveryData] = useState(null);
     const [deliveryDates, setDeliveryDates] = useState([new Date(), new Date()]);
     const [formData, setFormData] = useState({
@@ -109,20 +110,32 @@ function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
         }
     };
 
-    const handleCancelDelivery = async () => {
+    const handleCancelDelivery = async (deliveryId) => {
+        console.log('Delivery ID:', deliveryId);
         if (!window.confirm('Are you sure you want to cancel this delivery?')) return;
-
+    
         try {
-            await axios.delete(`http://localhost:5000/api/deliveries/${deliveryId}`);
+            const token = localStorage.getItem('token'); 
+            if (!token) {
+                console.error('No token found. User may not be logged in.');
+                alert('You need to log in to cancel a delivery.');
+                return;
+            }
+    
+            await axios.delete(`http://localhost:5000/api/deliveries/${deliveryId}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`, 
+                },
+            });
+    
             alert('Delivery canceled successfully.');
             fetchDeliveries();
-            onClose();
+            onClose(); 
         } catch (err) {
-            console.error('Error canceling delivery', err);
+            console.error('Error canceling delivery:', err.response?.data || err.message);
             alert('Error canceling delivery. Please call our customer service team for assistance.');
         }
     };
-
     if (!deliveryData) return <p>Loading...</p>;
 
     return (
@@ -203,7 +216,7 @@ function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
   
                 {/* Cancel Delivery Button */}
                     {canCancel && (
-                        <button type="button" onClick={handleCancelDelivery} className="edit__button edit__button--delete">
+                        <button type="button" onClick={() => handleCancelDelivery(deliveryId)} className="edit__button edit__button--delete">
                             Cancel Delivery
                         </button>
                     )}

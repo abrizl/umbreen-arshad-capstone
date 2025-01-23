@@ -87,7 +87,7 @@ function OverviewCard({openModal, deliveries, isLoading, error, userInfo, userEr
                         <ul className="overview__list">
                             {pendingDeliveries.map((delivery) => (
                                 <li key={delivery.id} className="overview__item">
-                                    <DeliveryItem key={delivery.id} delivery={delivery} openModal={openModal} />
+                                    <DeliveryItem deliveryId={delivery.id} delivery={delivery} openModal={openModal} />
                                 </li>
                             ))}
                         </ul>
