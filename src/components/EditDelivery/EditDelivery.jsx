@@ -5,7 +5,6 @@ import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
 
 function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
-    console.log("passed data", deliveryId)
     const [deliveryData, setDeliveryData] = useState(null);
     const [deliveryDates, setDeliveryDates] = useState([new Date(), new Date()]);
     const [formData, setFormData] = useState({
@@ -111,7 +110,6 @@ function EditDelivery({deliveryId, onClose, fetchDeliveries}) {
     };
 
     const handleCancelDelivery = async (deliveryId) => {
-        console.log('Delivery ID:', deliveryId);
         if (!window.confirm('Are you sure you want to cancel this delivery?')) return;
     
         try {

@@ -99,17 +99,17 @@ function OverviewCard({openModal, deliveries, isLoading, error, userInfo, userEr
                 <h3 className="overview__heading">Account information</h3>
                 <div className="overview__details">
                     <h4 className="overview__subheading">Name:</h4>
-                    {/* <p className="overview__data">{userInfo.name}</p> */}
+                    <p className="overview__data">{userInfo ? userInfo.name : 'Loading...'}</p>
                 </div>
 
                 <div className="overview__details">
                     <h4 className="overview__subheading">Email:</h4>
-                    {/* <p className="overview__data">{userInfo.email}</p> */}
+                    <p className="overview__data">{userInfo ? userInfo.email : 'Loading...'}</p>
                 </div>
 
                 <div className="overview__details">
                     <h4 className="overview__subheading">Phone Number:</h4>
-                    {/* <p className="overview__data">{userInfo.phone_number}</p> */}
+                    <p className="overview__data">{userInfo ? userInfo.phone_number : 'Loading...'}</p>
                 </div>
             </div>
         </section>
